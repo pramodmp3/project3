@@ -1,0 +1,68 @@
+
+body{
+    height: 100vh;
+     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: black;
+   font-family: cursive;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+}
+    .container {
+    display: flex;
+    /* flex-wrap: nowrap; this is default so no need to apply*/
+    gap: 20px;
+    width: 1000px;
+    height: auto; /* ✅ Let the container grow in height */
+    justify-content: center;
+}
+
+
+.child{
+    text-align: center;
+    background: #e6e6e6;
+    width: 300px;
+    height:auto;
+   border: none;
+    border-radius: 20px;
+   padding: 30px;
+}
+.child:hover{ 
+    transform: scale(1.09); 
+    /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); */
+}
+.container ul{
+    
+    text-align: center;
+    list-style: none;
+    margin: 20px 0;
+    padding: 0;
+}
+.container li{
+     margin: 10px 0;
+}
+.container p{
+    font-weight: bolder;
+    font-size: 20px;
+}
+button{
+    background-color: rgb(9, 124, 233);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    
+}
+button:hover{
+    background-color: #0056b3;
+    transform: scale(1.09); 
+}
+/* Responsive Design */
+@media (max-width: 780px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
