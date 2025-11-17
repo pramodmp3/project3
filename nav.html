@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stackly Responsive Navbar</title>
+    <link rel="stylesheet" href="./nav.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header / Fixed Navbar -->
+    <header class="header">
+      <a href="./home2.html" class="logo-link">
+        <div class="logo-img"><img src="./files/logooo.webp" alt="" /></div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="nav-links-desktop" aria-label="Main Navigation Desktop">
+        <ul class="nav-list-desktop">
+          <li class="nav-item-desktop" aria-haspopup="true">
+            <a href="./home2.html" class="nav-link-desktop">HOME</a>
+            <ul class="dropdown-desktop">
+              <li><a href="./index.html">HOME1</a></li>
+            </ul>
+          </li>
+          <li class="nav-item-desktop">
+            <a href="./service.html" class="nav-link-desktop">OUR SERVICE</a>
+          </li>
+          <li class="nav-item-desktop">
+            <a href="./career.html" class="nav-link-desktop">CAREERS</a>
+          </li>
+          <li class="nav-item-desktop" aria-haspopup="true">
+            <a href="./about2.html" class="nav-link-desktop">ABOUT</a>
+            <ul class="dropdown-desktop">
+              <li><a href="./about2.html">About US</a></li>
+              <li><a href="./globe.html">Stackly @ Global</a></li>
+            </ul>
+          </li>
+          <li class="nav-item-desktop">
+            <a href="./blog2.html" class="nav-link-desktop">BLOG</a>
+          </li>
+          <li class="nav-item-desktop">
+            <a href="./contact2.html" class="nav-link-desktop">CONTACT</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button
+        class="menu-toggle"
+        aria-controls="mobile-menu"
+        aria-expanded="false"
+        aria-label="Toggle Navigation"
+      >
+        <span class="menu-toggle-line"></span>
+        <span class="menu-toggle-line"></span>
+      </button>
+    </header>
+
+    <!-- Mobile Slide-in Navigation -->
+    <nav id="mobile-menu" class="nav-mobile" aria-label="Mobile Navigation">
+      <ul class="nav-list-mobile">
+        <li class="nav-item-mobile">
+          <a
+            class="nav-link-mobile dropdown-toggle"
+            data-dropdown="home-dropdown"
+            role="button"
+            aria-expanded="false"
+            aria-controls="home-dropdown"
+            href="./home2.html"
+          >
+            HOME
+            <span class="dropdown-arrow"></span>
+          </a>
+          <ul id="home-dropdown" class="dropdown-mobile">
+            <li><a href="./index.html">HOME1</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item-mobile">
+          <a href="./service.html" class="nav-link-mobile">OUR SERVICE</a>
+        </li>
+
+        <li class="nav-item-mobile">
+          <a href="./career.html" class="nav-link-mobile">CAREERS</a>
+        </li>
+
+        <li class="nav-item-mobile">
+          <a
+            class="nav-link-mobile dropdown-toggle"
+            data-dropdown="about-dropdown"
+            role="button"
+            aria-expanded="false"
+            aria-controls="about-dropdown"
+            href="./about2.html"
+          >
+            ABOUT
+            <span class="dropdown-arrow"></span>
+          </a>
+          <ul id="about-dropdown" class="dropdown-mobile">
+            <li><a href="./about2.html">About US</a></li>
+            <li><a href="./globe.html">Stackly @ Global</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item-mobile">
+          <a href="./blog2.html" class="nav-link-mobile">BLOG</a>
+        </li>
+
+        <li class="nav-item-mobile">
+          <a href="./contact2.html" class="nav-link-mobile">CONTACT</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Overlay for closing the mobile menu -->
+    <div class="overlay"></div>
+
+    <!-- JavaScript for Mobile Menu -->
+    <script src="./nav.js"></script>
+  </body>
+</html>

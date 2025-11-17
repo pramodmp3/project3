@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>STACKLY Login | Fixed Mobile Layout</title>
+
+    <!-- Import Poppins font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <style>
+      /* ============================================================
+          ROOT VARIABLES
+      ============================================================ */
+      :root {
+        --dark-bg: #111827;
+        --glass-bg: rgba(255, 255, 255, 0.05);
+        --glass-border: rgba(255, 255, 255, 0.1);
+        --neon-green: #38f8ac;
+        --neon-shadow: 0 0 15px var(--neon-green), 0 0 30px var(--neon-green);
+        --shadow-strong: rgba(0, 0, 0, 0.7);
+      }
+
+      /* ============================================================
+          GLOBAL RESET
+      ============================================================ */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        width: 100%;
+        overflow-x: hidden !important; /* HARD LOCK to prevent mobile overflow */
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        color: #e5e7eb;
+        background: linear-gradient(135deg, var(--dark-bg), #000);
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      }
+
+      /* ============================================================
+          GLOWING BACKGROUND (SAFE, NON-OVERFLOWING)
+      ============================================================ */
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background: radial-gradient(
+            circle at 10% 20%,
+            rgba(56, 248, 172, 0.15),
+            transparent 30%
+          ),
+          radial-gradient(
+            circle at 90% 80%,
+            rgba(56, 248, 172, 0.15),
+            transparent 30%
+          );
+        animation: floatBg 12s infinite alternate ease-in-out;
+        z-index: -1;
+      }
+
+      @keyframes floatBg {
+        0% {
+          transform: translate(0px, 0px);
+        }
+        100% {
+          transform: translate(40px, 30px);
+        }
+      }
+
+      /* ============================================================
+          MAIN CONTAINER
+      ============================================================ */
+      .login-container {
+        display: flex;
+        width: 100%;
+        max-width: 1050px;
+        margin: 20px;
+        background: var(--glass-bg);
+        border: 1px solid var(--glass-border);
+        border-radius: 20px;
+        overflow: hidden; /* Prevent internal overflowing */
+        box-shadow: 0 20px 50px var(--shadow-strong);
+        animation: fadeIn 0.8s ease forwards;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* ============================================================
+          LEFT — WELCOME SECTION
+      ============================================================ */
+      .welcome-section {
+        flex: 1;
+        padding: 50px;
+        background: linear-gradient(
+          135deg,
+          rgba(56, 248, 172, 0.1),
+          rgba(0, 0, 0, 0.5)
+        );
+        backdrop-filter: blur(6px);
+        border-right: 1px solid var(--glass-border);
+      }
+
+      .welcome-section h1 {
+        font-size: 2.7rem;
+        font-weight: 700;
+        line-height: 1.2;
+        color: #fff;
+        text-shadow: 0 0 10px rgba(56, 248, 172, 0.5);
+        margin-bottom: 15px;
+      }
+
+      .feature-list {
+        list-style: none;
+        margin-top: 25px;
+      }
+
+      .feature-list li {
+        margin: 12px 0;
+        opacity: 0.85;
+        font-size: 1rem;
+        display: flex;
+        align-items: center;
+      }
+
+      .feature-list i {
+        color: var(--neon-green);
+        margin-right: 10px;
+        text-shadow: var(--neon-shadow);
+      }
+
+      /* ============================================================
+          RIGHT — LOGIN FORM
+      ============================================================ */
+      .form-section {
+        flex: 1;
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .form-section h2 {
+        text-align: center;
+        font-size: 2rem;
+        color: var(--neon-green);
+        margin-bottom: 25px;
+      }
+
+      .input-group {
+        position: relative;
+        margin-bottom: 20px;
+      }
+
+      .input-field {
+        width: 100%;
+        padding: 15px 15px 15px 50px;
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid var(--glass-border);
+        border-radius: 10px;
+        color: #fff;
+        font-size: 1rem;
+        outline: none;
+        transition: all 0.3s ease;
+      }
+
+      .input-field:focus {
+        border-color: var(--neon-green);
+        box-shadow: var(--neon-shadow);
+      }
+
+      .input-icon {
+        position: absolute;
+        top: 50%;
+        left: 15px;
+        transform: translateY(-50%);
+        color: var(--neon-green);
+        opacity: 0.8;
+      }
+
+      /* Password Toggle */
+      .password-toggle {
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        color: var(--neon-green);
+      }
+
+      /* Login Button */
+      .login-button {
+        width: 100%;
+        padding: 15px;
+        margin-top: 15px;
+        border: none;
+        border-radius: 10px;
+        background: var(--neon-green);
+        color: var(--dark-bg);
+        font-size: 1.2rem;
+        font-weight: 700;
+        cursor: pointer;
+        box-shadow: 0 0 15px var(--neon-green);
+        transition: 0.3s;
+      }
+
+      .login-button:hover {
+        box-shadow: var(--neon-shadow);
+        background: #2fdfa0;
+      }
+
+      .signup-text {
+        margin-top: 20px;
+        text-align: center;
+      }
+      .signup-text a {
+        color: var(--neon-green);
+        text-decoration: none;
+      }
+
+      /* ============================================================
+          RESPONSIVE FIXES — MOBILE
+      ============================================================ */
+
+      @media (max-width: 900px) {
+        .login-container {
+          flex-direction: column;
+          width: 100%;
+          max-width: 95%;
+          margin: 0 auto;
+        }
+
+        .welcome-section,
+        .form-section {
+          width: 100%;
+          padding: 35px;
+        }
+
+        .welcome-section {
+          text-align: center;
+          border-right: none;
+          border-bottom: 1px solid var(--glass-border);
+        }
+
+        .feature-list {
+          text-align: left;
+          margin: 0 auto;
+          max-width: 300px;
+        }
+      }
+
+      @media (max-width: 600px) {
+        body {
+          padding: 15px;
+          align-items: flex-start;
+        }
+
+        .login-container {
+          border-radius: 12px;
+        }
+
+        .welcome-section h1 {
+          font-size: 2rem;
+        }
+
+        .feature-list {
+          display: none; /* Cleaner UI on small screens */
+        }
+
+        .form-section {
+          padding: 25px;
+        }
+
+        .input-field {
+          padding-left: 45px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="login-container">
+      <!-- LEFT SIDE -->
+      <div class="welcome-section">
+        <h1>Welcome to STACKLY</h1>
+        <p>
+          Your gateway to the future. Access cutting-edge tools designed for
+          efficiency and collaboration.
+        </p>
+
+        <ul class="feature-list">
+          <li><i class="fas fa-microchip"></i> Real-Time Data Sync</li>
+          <li><i class="fas fa-shield-alt"></i> Advanced Security Protocol</li>
+          <li><i class="fas fa-cloud"></i> Decentralized Storage</li>
+          <li><i class="fas fa-rocket"></i> Optimized Performance</li>
+        </ul>
+      </div>
+
+      <!-- RIGHT SIDE -->
+      <div class="form-section">
+        <h2>Secure Login</h2>
+
+        <form id="loginForm" action="./404.html">
+          <div class="input-group">
+            <input
+              type="email"
+              class="input-field"
+              placeholder="Email Address"
+              id="email"
+              required
+            />
+            <i class="fas fa-envelope input-icon"></i>
+          </div>
+
+          <div class="input-group">
+            <input
+              type="password"
+              class="input-field"
+              placeholder="Password"
+              id="password"
+              required
+            />
+            <i class="fas fa-lock input-icon"></i>
+            <i class="far fa-eye password-toggle" id="togglePassword"></i>
+          </div>
+          <button class="login-button">LOG IN</button>
+        </form>
+        <p class="signup-text">
+          Forgot Password? <a href="./404.html">Reset here</a>
+        </p>
+        <p class="signup-text">
+          Don't have an account? <a href="./signup.html">Create Account</a>
+        </p>
+      </div>
+    </div>
+
+    <script>
+      // PASSWORD SHOW/HIDE FUNCTION
+      const togglePassword = document.getElementById("togglePassword");
+      const passwordInput = document.getElementById("password");
+
+      togglePassword.addEventListener("click", () => {
+        passwordInput.type =
+          passwordInput.type === "password" ? "text" : "password";
+        togglePassword.classList.toggle("fa-eye-slash");
+      });
+    </script>
+  </body>
+</html>

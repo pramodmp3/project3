@@ -1,0 +1,378 @@
+/* CSS Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #f4f7f9;
+  padding-top: 80px; /* Space for fixed header */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* --- Header / Navbar Styling --- */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: linear-gradient(
+    135deg,
+    #ff7e5f,
+    /* Coral / Orange */ #feb47b /* Peachy pink */
+  );
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05),
+    0 2px 4px -2px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  padding: 0 5%;
+  z-index: 1000;
+}
+
+/* Logo Container */
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  /* Optional: adjust spacing if you want text next to logo */
+  gap: 10px;
+  z-index: 1001; /* Keep above other elements */
+}
+
+/* Logo Image Wrapper */
+.logo-img {
+  width: 150px; /* Adjust as needed */
+  height: 80px; /* Maintain aspect ratio of your logo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Ensures logo image doesn’t overflow */
+  border-radius: 8px; /* Rounded corners for modern look */
+  /* Optional: fallback background */
+}
+
+/* Logo Image Styling */
+.logo-img img {
+  width: 100%; /* Fill the container */
+  height: 100%; /* Keep container ratio */
+  object-fit: contain; /* Ensure logo fits nicely without stretching */
+  display: block;
+}
+
+/* --- Desktop Navigation (Desktop First) --- */
+.nav-links-desktop {
+  display: none; /* Hidden by default, shown on desktop */
+  margin-left: auto;
+}
+
+.nav-list-desktop {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-item-desktop {
+  position: relative;
+}
+
+.nav-link-desktop {
+  /* Default styling for all links */
+  padding: 10px 0;
+  font-weight: 600;
+  color: #4b5563;
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: block;
+}
+
+/* Specific styling for links that trigger a dropdown (with caret) */
+.nav-item-desktop[aria-haspopup="true"] > .nav-link-desktop {
+  display: flex; /* Use flex to align text and caret */
+  align-items: center;
+  gap: 5px; /* Space between text and arrow */
+}
+
+/* Add the down arrow icon using a pseudo-element */
+.nav-item-desktop[aria-haspopup="true"] > .nav-link-desktop::after {
+  content: "\25BE"; /* Small downward pointing triangle */
+  font-size: 0.8rem; /* Increased size */
+  line-height: 1;
+  color: #6b7280; /* Darker gray for better visibility */
+  transition: transform 0.3s ease, color 0.3s ease;
+  transform: translateY(1px); /* slight vertical adjustment */
+}
+
+/* Hover effects for all links */
+.nav-item-desktop:hover > .nav-link-desktop {
+  color: #3b82f6;
+  transform: translateY(-2px);
+}
+
+/* Rotate and color the arrow on hover */
+.nav-item-desktop:hover > .nav-link-desktop::after {
+  color: #3b82f6;
+  transform: translateY(1px) rotate(180deg); /* Rotate 180deg on hover */
+}
+
+/* Desktop Dropdown Styling */
+.dropdown-desktop {
+  position: absolute;
+  top: 100%; /* Position below the parent link */
+  left: 50%;
+  transform: translateX(-50%) translateY(10px); /* Initial slide down */
+  background: #ffffff;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -4px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  overflow: hidden;
+  min-width: 180px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.nav-item-desktop:hover > .dropdown-desktop {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0); /* Final slide up */
+}
+
+.dropdown-desktop a {
+  padding: 12px 20px;
+  display: block;
+  white-space: nowrap;
+  color: #4b5563;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.dropdown-desktop a:hover {
+  background: linear-gradient(
+    135deg,
+    #ff7e5f,
+    /* Coral / Orange */ #feb47b /* Peachy pink */
+  ); /* Light blue background on hover */
+  color: #3b82f6;
+}
+
+.dropdown-desktop .nav-item-desktop {
+  /* Remove margin/padding from inner list items */
+  margin: 0;
+  padding: 0;
+}
+
+/* --- Mobile Menu Icon / Hamburger --- */
+.menu-toggle {
+  display: none; /* Hidden on desktop */
+  width: 30px;
+  height: 30px;
+  position: relative;
+  margin-left: auto;
+  cursor: pointer;
+  z-index: 1010;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+/* Custom Hamburger Icon (Stylized Plus/Minus) */
+.menu-toggle-line {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background: #3b82f6;
+  border-radius: 2px;
+  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+}
+
+.menu-toggle-line:nth-child(1) {
+  top: 50%;
+  transform: translateY(-50%) rotate(0deg);
+}
+.menu-toggle-line:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%) rotate(90deg);
+}
+
+/* Icon Morph: X/Close state */
+.menu-toggle.open .menu-toggle-line:nth-child(1) {
+  transform: translateY(-50%) rotate(45deg);
+}
+.menu-toggle.open .menu-toggle-line:nth-child(2) {
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+/* --- Mobile Navigation (Slide-in Menu) --- */
+.nav-mobile {
+  position: fixed;
+  top: 0;
+  right: 0; /* Slide in from the right */
+  width: 70%;
+  max-width: 300px;
+  height: 100%;
+  background-color: #ffffff;
+  padding-top: 90px;
+  transform: translateX(100%); /* Start off-screen */
+  transition: transform 0.5s cubic-bezier(0.7, 0, 0.3, 1);
+  box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+}
+
+.nav-mobile.open {
+  transform: translateX(0); /* Slide into view */
+}
+
+.nav-list-mobile {
+  list-style: none;
+  padding: 0 20px;
+}
+
+.nav-item-mobile {
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.nav-link-mobile {
+  display: block;
+  padding: 15px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #4b5563;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.nav-link-mobile:hover {
+  color: #3b82f6;
+}
+
+.nav-link-mobile.dropdown-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* Simple arrow style for demonstration */
+.dropdown-arrow {
+  display: inline-block;
+  margin-left: 8px;
+  border: solid black;
+  border-width: 0 2px 2px 0;
+  padding: 4px;
+  transform: rotate(45deg);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.dropdown-toggle.active .dropdown-arrow {
+  transform: rotate(135deg);
+}
+
+/* Optional for smooth dropdown animation */
+.dropdown-mobile {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.dropdown-mobile.open {
+  max-height: 500px; /* adjust as needed */
+}
+/* Dropdown Arrow/Caret (Mobile) */
+.dropdown-toggle::after {
+  /* content: ">"; Simple arrow */
+  /* display: inline-block;
+  transition: transform 0.3s ease; */
+}
+.dropdown-toggle.active::after {
+  transform: rotate(90deg); /* Rotate to indicate open */
+}
+
+/* Mobile Dropdown (Accordion Effect) */
+.dropdown-mobile {
+  list-style: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out, padding 0.4s ease-out; /* Smooth accordion animation */
+  padding-left: 0;
+}
+
+.dropdown-mobile.open {
+  max-height: 200px; /* Adjust based on content (must be > required height) */
+  padding-bottom: 10px;
+}
+
+.dropdown-mobile a {
+  display: block;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #6b7280;
+  transition: color 0.3s ease;
+  border-radius: 4px;
+  margin-top: 5px;
+}
+.dropdown-mobile a:hover {
+  color: #3b82f6;
+  background-color: #f7f9fb;
+}
+
+/* Overlay for Mobile Menu */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 998;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease;
+}
+
+.overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* --- Media Queries (Mobile to Desktop Transition) --- */
+@media (max-width: 900px) {
+  .nav-links-desktop {
+    display: none;
+  }
+  .menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 901px) {
+  .nav-links-desktop {
+    display: block;
+  }
+  .menu-toggle {
+    display: none;
+  }
+  .nav-mobile {
+    display: none;
+  }
+}
+
+/* Example Page Content for scrolling */
+.content {
+  padding: 20px 5%;
+}
+.content h1 {
+  margin-bottom: 20px;
+  color: #1f2937;
+}
+.content p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #4b5563;
+}

@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stackly Pharma Members</title>
+    <!-- Link to the external stylesheet -->
+    <link rel="stylesheet" href="members.css" />
+    <!-- Use Inter font for a modern, clean look -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;900&display=swap");
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="./index.html" class="logo">
+        <!-- Placeholder Logo -->
+        <img
+          src="./assets/logo.png"
+          alt="STACKLY Logo"
+          onerror="this.onerror=null;this.src='https://placehold.co/150x40/38f8ac/111827?text=GlowForge'"
+        />
+      </a>
+
+      <!-- Hamburger Icon for Mobile -->
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+
+      <!-- Navigation Menu -->
+      <ul class="nav-menu">
+        <!-- HOME Dropdown -->
+        <li class="nav-item dropdown">
+          <a href="./index.html" class="nav-link"
+            >HOME <i class="fas fa-chevron-down dropdown-arrow"></i
+          ></a>
+          <ul class="dropdown-content">
+            <li><a href="./home2.html">HOME2</a></li>
+          </ul>
+        </li>
+
+        <!-- SERVICES Dropdown -->
+        <li class="nav-item dropdown">
+          <a href="./service.html" class="nav-link"
+            >WHAT WE DO <i class="fas fa-chevron-down dropdown-arrow"></i
+          ></a>
+          <ul class="dropdown-content">
+            <li><a href="./gen.html">Generics</a></li>
+            <li><a href="./api.html">APIs</a></li>
+            <li><a href="./med.html">Innovative Medicines</a></li>
+            <li><a href="./consumer.html">Consumer Health</a></li>
+          </ul>
+        </li>
+
+        <!-- ABOUT Dropdown -->
+        <li class="nav-item dropdown">
+          <a href="./about.html" class="nav-link"
+            >WHO WE ARE <i class="fas fa-chevron-down dropdown-arrow"></i
+          ></a>
+          <ul class="dropdown-content">
+            <li><a href="./about.html">ABOUT US</a></li>
+            <li><a href="./members.html">Members</a></li>
+            <li><a href="./faq.html">FAQs</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a href="./blog.html" class="nav-link">BLOG</a>
+        </li>
+        <li class="nav-item">
+          <a href="./dash.html" class="nav-link">DASHBOARD</a>
+        </li>
+        <li class="nav-item">
+          <a href="contact.html" class="nav-link">CONTACT</a>
+        </li>
+
+        <!-- Login Button -->
+        <li class="nav-item">
+          <a href="./login.html" class="login-button">
+            <span>LOG IN</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main class="container">
+      <!-- Main Heading -->
+      <header class="page-header">
+        <h1 class="main-heading">
+          Stackly Pharma Labs <span class="neon-accent">Team Members</span>
+        </h1>
+        <p class="sub-heading">
+          Meet the minds driving pharmaceutical innovation and compliance.
+        </p>
+      </header>
+
+      <!-- Member Grid -->
+      <div class="members-grid">
+        <!-- Member Card 1 -->
+        <section class="member-card card-1">
+          <div class="image-wrapper">
+            <img
+              src="./assets/m1.webp"
+              alt="Placeholder image for Dr. Ava Chen"
+              class="member-image"
+            />
+          </div>
+          <h2 class="member-name">Dr. Ava Chen</h2>
+          <p class="member-title">Chief Scientific Officer</p>
+          <p class="member-bio">
+            Leads the strategic direction for all R&D pipelines, specializing in
+            AI-driven molecular synthesis and preclinical validation.
+          </p>
+          <div class="button-wrapper">
+            <a href="./404.html" class="connect-button">Connect</a>
+          </div>
+        </section>
+
+        <!-- Member Card 2 -->
+        <section class="member-card card-2">
+          <div class="image-wrapper">
+            <img
+              src="./assets/m2.webp"
+              alt="Placeholder image for Marcus Ramirez"
+              class="member-image"
+            />
+          </div>
+          <h2 class="member-name">Marcus Ramirez</h2>
+          <p class="member-title">Research Lead, Gene Therapy</p>
+          <p class="member-bio">
+            Focuses on development and ethical implementation of next-generation
+            gene editing tools for chronic disease management.
+          </p>
+          <div class="button-wrapper">
+            <a href="./404.html" class="connect-button">Connect</a>
+          </div>
+        </section>
+
+        <!-- Member Card 3 -->
+        <section class="member-card card-3">
+          <div class="image-wrapper">
+            <img
+              src="./assets/m3.webp"
+              alt="Placeholder image for Sarah Lee"
+              class="member-image"
+            />
+          </div>
+          <h2 class="member-name">Sarah Lee</h2>
+          <p class="member-title">Quality Assurance Manager</p>
+          <p class="member-bio">
+            Ensures strict adherence to global GMP standards, driving a
+            zero-defect culture across all manufacturing and clinical processes.
+          </p>
+          <div class="button-wrapper">
+            <a href="./404.html" class="connect-button">Connect</a>
+          </div>
+        </section>
+
+        <!-- Member Card 4 -->
+        <section class="member-card card-4">
+          <div class="image-wrapper">
+            <img
+              src="./assets/m4.webp"
+              alt="Placeholder image for Robert Torres"
+              class="member-image"
+            />
+          </div>
+          <h2 class="member-name">Robert Torres</h2>
+          <p class="member-title">Biochem Analyst</p>
+          <p class="member-bio">
+            Expert in high-throughput screening and complex assay development,
+            accelerating early-stage compound discovery.
+          </p>
+          <div class="button-wrapper">
+            <a href="./404.html" class="connect-button">Connect</a>
+          </div>
+        </section>
+
+        <!-- Member Card 5 -->
+        <section class="member-card card-5">
+          <div class="image-wrapper">
+            <img
+              src="./assets/m5.webp"
+              alt="Placeholder image for Jena Davis"
+              class="member-image"
+            />
+          </div>
+          <h2 class="member-name">Jena Davis</h2>
+          <p class="member-title">Clinical Trials Coordinator</p>
+          <p class="member-bio">
+            Manages global logistics and data integrity for Phase I and Phase II
+            clinical studies, maintaining patient safety protocols.
+          </p>
+          <div class="button-wrapper">
+            <a href="./404.html" class="connect-button">Connect</a>
+          </div>
+        </section>
+
+        <!-- Member Card 6 -->
+        <section class="member-card card-6">
+          <div class="image-wrapper">
+            <img
+              src="./assets/m6.webp"
+              alt="Placeholder image for Samuel Smith"
+              class="member-image"
+            />
+          </div>
+          <h2 class="member-name">Samuel Smith</h2>
+          <p class="member-title">Regulatory Affairs Specialist</p>
+          <p class="member-bio">
+            Specializes in FDA and EMA submission processes, ensuring new drug
+            applications meet all required legal and scientific criteria.
+          </p>
+          <div class="button-wrapper">
+            <a href="./404.html" class="connect-button">Connect</a>
+          </div>
+        </section>
+
+        <!-- Member Card 7 -->
+        <section class="member-card card-7">
+          <div class="image-wrapper">
+            <img
+              src="./assets/m2.webp"
+              alt="Placeholder image for Kyle Chang"
+              class="member-image"
+            />
+          </div>
+          <h2 class="member-name">Kyle Chang</h2>
+          <p class="member-title">Process Optimization Engineer</p>
+          <p class="member-bio">
+            Designs and implements continuous manufacturing systems to maximize
+            yield, efficiency, and resource sustainability.
+          </p>
+          <div class="button-wrapper">
+            <a href="./404.html" class="connect-button">Connect</a>
+          </div>
+        </section>
+
+        <!-- Member Card 8 -->
+        <section class="member-card card-8">
+          <div class="image-wrapper">
+            <img
+              src="./assets/m8.webp"
+              alt="Placeholder image for Aisha Mohammed"
+              class="member-image"
+            />
+          </div>
+          <h2 class="member-name">Aisha Mohammed</h2>
+          <p class="member-title">Data Scientist, Bioinformatics</p>
+          <p class="member-bio">
+            Applies advanced statistical modeling to large genomic datasets,
+            identifying new disease biomarkers and drug targets.
+          </p>
+          <div class="button-wrapper">
+            <a href="./404.html" class="connect-button">Connect</a>
+          </div>
+        </section>
+
+        <!-- Member Card 9 -->
+        <section class="member-card card-9">
+          <div class="image-wrapper">
+            <img
+              src="./assets/m9.webp"
+              alt="Placeholder image for Liam Hayes"
+              class="member-image"
+            />
+          </div>
+          <h2 class="member-name">Liam Hayes</h2>
+          <p class="member-title">Lead Pharmaceutical Chemist</p>
+          <p class="member-bio">
+            Responsible for the chemical synthesis and purification of novel
+            small molecule compounds in the preclinical pipeline.
+          </p>
+          <div class="button-wrapper">
+            <a href="./404.html" class="connect-button">Connect</a>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer class="glass-footer">
+      <div class="footer-container">
+        <div class="footer-section logo-section">
+          <a href="./index.html" class="logo-link">
+            <img
+              src="./assets/logo.png"
+              alt="STACKLY Logo"
+              class="footer-logo"
+              onerror="this.onerror=null;this.src='https://placehold.co/180x45/38f8ac/111827?text=GlowForge+Logo'"
+            />
+          </a>
+          <p class="copyright">&copy; 2025 GlowForge. All rights reserved.</p>
+        </div>
+
+        <div class="footer-section quick-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="./index.html">HOME</a></li>
+            <li><a href="./blog.html">BLOG</a></li>
+            <li><a href="./contact.html">CONTACT</a></li>
+            <li><a href="./about.html">WHO WE ARE</a></li>
+            <li><a href="./service.html">WHAT WE DO</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section company-info">
+          <h3>Contact</h3>
+          <p>
+            <i class="fas fa-map-marker-alt"></i> 111 Neon Drive, New York, NY
+          </p>
+          <p><i class="fas fa-phone"></i> +1 (212) 555-GLOW</p>
+          <p><i class="fas fa-envelope"></i> support@glowforge.com</p>
+          <p><i class="fas fa-clock"></i> Mon - Fri: 9am - 5pm EST</p>
+        </div>
+
+        <div class="footer-section follow-newsletter">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="./404.html" aria-label="LinkedIn"
+              ><i class="fab fa-linkedin icon-glow"></i
+            ></a>
+            <a href="./404.html" aria-label="Twitter"
+              ><i class="fab fa-twitter icon-glow"></i
+            ></a>
+            <a href="./404.html" aria-label="Instagram"
+              ><i class="fab fa-instagram icon-glow"></i
+            ></a>
+            <a href="./404.html" aria-label="Discord"
+              ><i class="fab fa-discord icon-glow"></i
+            ></a>
+          </div>
+
+          <h3 class="newsletter-title">Stay Connected</h3>
+          <form
+            id="newsletter-form"
+            class="newsletter-form"
+            action="./404.html"
+          >
+            <input
+              type="email"
+              id="email-input"
+              placeholder="Your Email Address"
+              required
+            />
+            <button type="submit" id="newsletter-submit" class="neon-button">
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+    </footer>
+    <script src="./nav.js"></script>
+    <!-- <script src="./footer.js"></script> -->
+  </body>
+</html>

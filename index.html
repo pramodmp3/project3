@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stackly Pharma - Advancing Health</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="./index.html" class="logo">
+        <!-- Placeholder Logo -->
+        <img
+          src="./assets/logo.png"
+          alt="STACKLY Logo"
+          onerror="this.onerror=null;this.src='https://placehold.co/150x40/38f8ac/111827?text=GlowForge'"
+        />
+      </a>
+
+      <!-- Hamburger Icon for Mobile -->
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+
+      <!-- Navigation Menu -->
+      <ul class="nav-menu">
+        <!-- HOME Dropdown -->
+        <li class="nav-item dropdown">
+          <a href="./index.html" class="nav-link"
+            >HOME <i class="fas fa-chevron-down dropdown-arrow"></i
+          ></a>
+          <ul class="dropdown-content">
+            <li><a href="./home2.html">HOME2</a></li>
+          </ul>
+        </li>
+
+        <!-- SERVICES Dropdown -->
+        <li class="nav-item dropdown">
+          <a href="./service.html" class="nav-link"
+            >WHAT WE DO <i class="fas fa-chevron-down dropdown-arrow"></i
+          ></a>
+          <ul class="dropdown-content">
+            <li><a href="./gen.html">Generics</a></li>
+            <li><a href="./api.html">APIs</a></li>
+            <li><a href="./med.html">Innovative Medicines</a></li>
+            <li><a href="./consumer.html">Consumer Health</a></li>
+          </ul>
+        </li>
+
+        <!-- ABOUT Dropdown -->
+        <li class="nav-item dropdown">
+          <a href="./about.html" class="nav-link"
+            >WHO WE ARE <i class="fas fa-chevron-down dropdown-arrow"></i
+          ></a>
+          <ul class="dropdown-content">
+            <li><a href="./about.html">About US</a></li>
+            <li><a href="./members.html">Members</a></li>
+            <li><a href="./faq.html">FAQs</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a href="./blog.html" class="nav-link">BLOG</a>
+        </li>
+        <li class="nav-item">
+          <a href="./dash.html" class="nav-link">DASHBOARD</a>
+        </li>
+        <li class="nav-item">
+          <a href="contact.html" class="nav-link">CONTACT</a>
+        </li>
+
+        <!-- Login Button -->
+        <li class="nav-item">
+          <a href="./login.html" class="login-button">
+            <span>LOG IN</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div id="page-loader" class="loader-container">
+      <div class="neon-text loader-text">STACKLY</div>
+      <div class="progress-bar-container">
+        <div id="progress-bar-fill" class="progress-bar-fill"></div>
+      </div>
+      <div id="loader-percentage" class="neon-text loader-percentage">0%</div>
+    </div>
+
+    <main id="main-content" class="content-hidden">
+      <header id="hero" class="hero-section section-padding animate-fade-in">
+        <div class="video-background-container">
+          <video autoplay loop muted playsinline class="hero-video">
+            <source
+              src="./assets/hero.mp4"
+              type="video/mp4"
+              onerror="this.parentElement.style.display='none';"
+            />
+          </video>
+          <div class="video-overlay"></div>
+        </div>
+
+        <h1 class="neon-heading main-heading">
+          Pioneering the <span class="highlight">Future</span> of
+          <span class="highlight">Health</span>.
+        </h1>
+        <p class="subheading text-light animate-fade-up-1">
+          Innovative solutions and trusted consumer care, driven by rigorous
+          science and a commitment to patient wellbeing.
+        </p>
+        <a
+          href="./consumer.html"
+          class="cta-button neon-button animate-fade-up-2"
+          role="button"
+        >
+          Discover Our Science
+        </a>
+      </header>
+
+      <section id="about" class="about-section section-padding animate-fade-in">
+        <article class="container">
+          <h2 class="section-title neon-text">Our Mission & Vision</h2>
+          <div class="about-content">
+            <p class="description text-light">
+              **Mission:** To develop and deliver groundbreaking pharmaceutical
+              products that significantly improve patient outcomes and quality
+              of life globally.
+            </p>
+            <p class="description text-light">
+              **Vision:** To be the world's most trusted and innovative
+              pharmaceutical company, setting the standard for scientific
+              excellence and ethical practice in medicine.
+            </p>
+          </div>
+        </article>
+      </section>
+
+      <section
+        id="products"
+        class="products-section section-padding animate-fade-in"
+      >
+        <div class="container">
+          <h2 class="section-title neon-text">Our Core Offerings</h2>
+          <div class="card-grid">
+            <article
+              class="glass-card product-card animate-fade-up-3"
+              data-id="p1"
+            >
+              <img
+                src="./assets/Research.webp"
+                alt="Research lab image"
+                class="card-image"
+                loading="lazy"
+              />
+              <h3 class="card-title">Precision Therapeutics</h3>
+              <p class="card-description">
+                Targeted treatments for complex diseases using cutting-edge
+                genetic research.
+              </p>
+              <a
+                href="./api.html"
+                class="card-link"
+                aria-label="Learn more about Precision Therapeutics"
+                >View Details</a
+              >
+            </article>
+
+            <article
+              class="glass-card product-card animate-fade-up-4"
+              data-id="p2"
+            >
+              <img
+                src="./assets/gen.webp"
+                alt="Tablet packaging image"
+                class="card-image"
+                loading="lazy"
+              />
+              <h3 class="card-title">Specialty Generics</h3>
+              <p class="card-description">
+                High-quality, affordable generic versions of essential and
+                complex medications.
+              </p>
+              <a
+                href="./gen.html"
+                class="card-link"
+                aria-label="Learn more about Specialty Generics"
+                >View Details</a
+              >
+            </article>
+
+            <article
+              class="glass-card product-card animate-fade-up-5"
+              data-id="p3"
+            >
+              <img
+                src="./assets/med.webp"
+                alt="Digital health interface image"
+                class="card-image"
+                loading="lazy"
+              />
+              <h3 class="card-title">Digital Health Solutions</h3>
+              <p class="card-description">
+                Integrated software and devices to monitor patient health and
+                manage treatments remotely.
+              </p>
+              <a
+                href="./consumer.html"
+                class="card-link"
+                aria-label="Learn more about Digital Health Solutions"
+                >View Details</a
+              >
+            </article>
+
+            <article
+              class="glass-card product-card animate-fade-up-6"
+              data-id="p4"
+            >
+              <img
+                src="./assets/vac.webp"
+                alt="Vaccine vial image"
+                class="card-image"
+                loading="lazy"
+              />
+              <h3 class="card-title">Vaccine Development</h3>
+              <p class="card-description">
+                Prophylactic treatments for infectious diseases using novel
+                adjuvant technologies.
+              </p>
+              <a
+                href="./med.html"
+                class="card-link"
+                aria-label="Learn more about Vaccine Development"
+                >View Details</a
+              >
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="innovations"
+        class="innovations-section section-padding animate-fade-in"
+      >
+        <div class="container">
+          <h2 class="section-title neon-text">Driving Innovation</h2>
+          <div class="innovation-grid">
+            <article class="innovation-item animate-fade-up-1">
+              <i class="fas fa-flask neon-icon"></i>
+              <h3 class="item-title">AI-Powered R&D</h3>
+              <p class="item-description">
+                Accelerating drug discovery through machine learning and vast
+                data analysis.
+              </p>
+            </article>
+            <article class="innovation-item animate-fade-up-2">
+              <i class="fas fa-dna neon-icon"></i>
+              <h3 class="item-title">Gene Editing Tech</h3>
+              <p class="item-description">
+                Exploring the potential of CRISPR and other gene therapies for
+                curative medicine.
+              </p>
+            </article>
+            <article class="innovation-item animate-fade-up-3">
+              <i class="fas fa-microscope neon-icon"></i>
+              <h3 class="item-title">Novel Delivery Systems</h3>
+              <p class="item-description">
+                Creating smarter, more efficient ways to deliver active
+                compounds precisely where they are needed.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="consumer-health"
+        class="consumer-health-section section-padding animate-fade-in"
+      >
+        <div class="container">
+          <h2 class="section-title neon-text">Consumer Health & Wellness</h2>
+          <div class="consumer-grid">
+            <article
+              class="glass-card consumer-card animate-fade-up-4"
+              data-id="c1"
+            >
+              <img
+                src="./assets/nt.webp"
+                alt="Vitamin bottle image"
+                class="card-image"
+                loading="lazy"
+              />
+              <h3 class="card-title">Advanced Nutrition</h3>
+              <p class="card-description">
+                Scientifically formulated vitamins and supplements for daily
+                vitality and support.
+              </p>
+              <a
+                href="./consumer.html"
+                class="card-link"
+                aria-label="Explore Advanced Nutrition"
+                >View Range</a
+              >
+            </article>
+
+            <article
+              class="glass-card consumer-card animate-fade-up-5"
+              data-id="c2"
+            >
+              <img
+                src="./assets/derma.webp"
+                alt="Skincare product image"
+                class="card-image"
+                loading="lazy"
+              />
+              <h3 class="card-title">Dermatological Care</h3>
+              <p class="card-description">
+                Prescription-grade skincare solutions backed by clinical
+                dermatology research.
+              </p>
+              <a
+                href="./consumer.html"
+                class="card-link"
+                aria-label="Explore Dermatological Care"
+                >View Range</a
+              >
+            </article>
+
+            <article
+              class="glass-card consumer-card animate-fade-up-6"
+              data-id="c3"
+            >
+              <img
+                src="./assets/pain.webp"
+                alt="Pain relief packaging image"
+                class="card-image"
+                loading="lazy"
+              />
+              <h3 class="card-title">Pain Management</h3>
+              <p class="card-description">
+                Over-the-counter pain relief with fast-acting and long-lasting
+                efficacy.
+              </p>
+              <a
+                href="./consumer.html"
+                class="card-link"
+                aria-label="Explore Pain Management"
+                >View Range</a
+              >
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="final-cta"
+        class="cta-section section-padding animate-fade-in"
+      >
+        <div class="container">
+          <h2 class="section-title neon-text final-cta-title">
+            Ready to Collaborate?
+          </h2>
+          <p class="subheading text-light">
+            Join us in shaping the future of medicine.
+          </p>
+          <a
+            href="./contact.html"
+            class="cta-button neon-button animate-fade-up-1"
+            role="button"
+          >
+            Contact NOW
+          </a>
+        </div>
+      </section>
+    </main>
+    <footer class="glass-footer">
+      <div class="footer-container">
+        <div class="footer-section logo-section">
+          <a href="./index.html" class="logo-link">
+            <img
+              src="./assets/logo.png"
+              alt="STACKLY Logo"
+              class="footer-logo"
+              onerror="this.onerror=null;this.src='https://placehold.co/180x45/38f8ac/111827?text=GlowForge+Logo'"
+            />
+          </a>
+          <p class="copyright">&copy; 2025 GlowForge. All rights reserved.</p>
+        </div>
+
+        <div class="footer-section quick-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="./index.html">HOME</a></li>
+            <li><a href="./blog.html">BLOG</a></li>
+            <li><a href="./contact.html">CONTACT</a></li>
+            <li><a href="./about.html">WHO WE ARE</a></li>
+            <li><a href="./service.html">WHAT WE DO</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section company-info">
+          <h3>Contact</h3>
+          <p>
+            <i class="fas fa-map-marker-alt"></i> 111 Neon Drive, New York, NY
+          </p>
+          <p><i class="fas fa-phone"></i> +1 (212) 555-GLOW</p>
+          <p><i class="fas fa-envelope"></i> support@glowforge.com</p>
+          <p><i class="fas fa-clock"></i> Mon - Fri: 9am - 5pm EST</p>
+        </div>
+
+        <div class="footer-section follow-newsletter">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="./404.html" aria-label="LinkedIn"
+              ><i class="fab fa-linkedin icon-glow"></i
+            ></a>
+            <a href="./404.html" aria-label="Twitter"
+              ><i class="fab fa-twitter icon-glow"></i
+            ></a>
+            <a href="./404.html" aria-label="Instagram"
+              ><i class="fab fa-instagram icon-glow"></i
+            ></a>
+            <a href="./404.html" aria-label="Discord"
+              ><i class="fab fa-discord icon-glow"></i
+            ></a>
+          </div>
+
+          <h3 class="newsletter-title">Stay Connected</h3>
+          <form
+            id="newsletter-form"
+            class="newsletter-form"
+            action="./404.html"
+          >
+            <input
+              type="email"
+              id="email-input"
+              placeholder="Your Email Address"
+              required
+            />
+            <button type="submit" id="newsletter-submit" class="neon-button">
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const loader = document.getElementById("page-loader");
+        const content = document.getElementById("main-content");
+        const percentageText = document.getElementById("loader-percentage");
+        const progressBar = document.getElementById("progress-bar-fill");
+        let progress = 0;
+        const targetDuration = 1500; // milliseconds for the loading effect
+        const intervalTime = 50; // Update every 50ms
+        const step = (100 / targetDuration) * intervalTime;
+
+        const loadingInterval = setInterval(() => {
+          progress += step;
+
+          if (progress >= 100) {
+            progress = 100;
+            clearInterval(loadingInterval);
+
+            // Final UI updates
+            progressBar.style.width = "100%";
+            percentageText.textContent = "100%";
+
+            // Start fade-out
+            setTimeout(() => {
+              loader.classList.add("fade-out");
+              content.classList.remove("content-hidden");
+
+              // Hide loader completely after fade-out transition
+              loader.addEventListener(
+                "transitionend",
+                () => {
+                  loader.style.display = "none";
+                },
+                { once: true }
+              );
+            }, 200); // Small delay before fade-out
+          } else {
+            const displayProgress = Math.min(99, Math.floor(progress));
+            progressBar.style.width = `${progress}%`;
+            percentageText.textContent = `${displayProgress}%`;
+          }
+        }, intervalTime);
+      });
+    </script>
+    <script src="./nav.js"></script>
+    <!-- <script src="./footer.js"></script> -->
+  </body>
+</html>

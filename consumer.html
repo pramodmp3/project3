@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stackly Pharma — Consumer Health</title>
+    <!-- Link to the external stylesheet -->
+    <link rel="stylesheet" href="consumer.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="./index.html" class="logo">
+        <!-- Placeholder Logo -->
+        <img
+          src="./assets/logo.png"
+          alt="STACKLY Logo"
+          onerror="this.onerror=null;this.src='https://placehold.co/150x40/38f8ac/111827?text=GlowForge'"
+        />
+      </a>
+
+      <!-- Hamburger Icon for Mobile -->
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+
+      <!-- Navigation Menu -->
+      <ul class="nav-menu">
+        <!-- HOME Dropdown -->
+        <li class="nav-item dropdown">
+          <a href="./index.html" class="nav-link"
+            >HOME <i class="fas fa-chevron-down dropdown-arrow"></i
+          ></a>
+          <ul class="dropdown-content">
+            <li><a href="./home2.html">HOME2</a></li>
+          </ul>
+        </li>
+
+        <!-- SERVICES Dropdown -->
+        <li class="nav-item dropdown">
+          <a href="./service.html" class="nav-link"
+            >WHAT WE DO <i class="fas fa-chevron-down dropdown-arrow"></i
+          ></a>
+          <ul class="dropdown-content">
+            <li><a href="./gen.html">Generics</a></li>
+            <li><a href="./api.html">APIs</a></li>
+            <li><a href="./med.html">Innovative Medicines</a></li>
+            <li><a href="./consumer.html">Consumer Health</a></li>
+          </ul>
+        </li>
+
+        <!-- ABOUT Dropdown -->
+        <li class="nav-item dropdown">
+          <a href="./about.html" class="nav-link"
+            >WHO WE ARE <i class="fas fa-chevron-down dropdown-arrow"></i
+          ></a>
+          <ul class="dropdown-content">
+            <li><a href="./about.html">About US</a></li>
+            <li><a href="./members.html">Members</a></li>
+            <li><a href="./faq.html">FAQs</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a href="./blog.html" class="nav-link">BLOG</a>
+        </li>
+        <li class="nav-item">
+          <a href="./dash.html" class="nav-link">DASHBOARD</a>
+        </li>
+        <li class="nav-item">
+          <a href="contact.html" class="nav-link">CONTACT</a>
+        </li>
+
+        <!-- Login Button -->
+        <li class="nav-item">
+          <a href="./login.html" class="login-button">
+            <span>LOG IN</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main class="container">
+      <!-- 1. Hero Section -->
+      <header class="hero-section">
+        <h1 class="main-heading">Consumer Health by <span>Stackly</span></h1>
+        <p class="sub-heading">
+          Science-backed wellness products, built on pharmaceutical precision
+          and purity standards.
+        </p>
+      </header>
+
+      <!-- 2. Overview of Consumer Health Products -->
+      <section class="products-overview">
+        <h2 class="section-title">Our <span>Product</span> Categories</h2>
+        <div class="product-grid">
+          <!-- Product Card 1: Vitamins -->
+          <article class="product-card glass-card">
+            <img
+              class="product-image"
+              src="./assets/con1.webp"
+              alt="Placeholder image for Daily Vitamins"
+              width="200"
+              height="200"
+            />
+            <h3 class="product-name">Daily Essentials Pro</h3>
+            <p class="product-description">
+              A high-absorption multivitamin blend designed for daily energy and
+              immune support, formulated with patented release technology.
+            </p>
+          </article>
+
+          <!-- Product Card 2: Pain Relief -->
+          <article class="product-card glass-card">
+            <img
+              class="product-image"
+              src="./assets/con2.webp"
+              alt="Placeholder image for Fast Pain Relief"
+              width="200"
+              height="200"
+            />
+            <h3 class="product-name">ReliefMax Ultra</h3>
+            <p class="product-description">
+              Fast-acting, non-drowsy formulation for targeted relief of
+              headaches and minor aches. Manufactured in GMP-certified
+              facilities.
+            </p>
+          </article>
+
+          <!-- Product Card 3: Digestive Health -->
+          <article class="product-card glass-card">
+            <img
+              class="product-image"
+              src="./assets/con3.webp"
+              alt="Placeholder image for Digestive Health"
+              width="200"
+              height="200"
+            />
+            <h3 class="product-name">GutBalance Flora</h3>
+            <p class="product-description">
+              Advanced probiotic capsules with a unique delivery system,
+              ensuring live cultures reach the gut where they are needed most.
+            </p>
+          </article>
+
+          <!-- Product Card 4: Sleep Aid -->
+          <article class="product-card glass-card">
+            <img
+              class="product-image"
+              src="./assets/con4.webp"
+              alt="Placeholder image for Sleep Aid"
+              width="200"
+              height="200"
+            />
+            <h3 class="product-name">Restful Night Melatonin</h3>
+            <p class="product-description">
+              Controlled-release melatonin formulation that assists in falling
+              asleep faster and maintaining a deeper, more restorative sleep
+              cycle.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- 3. Benefits Section -->
+      <section class="benefits-section">
+        <h2 class="section-title">Why Choose <span>Stackly</span>?</h2>
+        <div class="benefits-grid">
+          <div class="benefit-item">
+            <div class="benefit-icon">🧬</div>
+            <h3 class="benefit-title">Formulated by Scientists</h3>
+            <p class="benefit-description">
+              Every product is developed by our in-house R&D team using
+              evidence-based research and clinical data.
+            </p>
+          </div>
+
+          <div class="benefit-item">
+            <div class="benefit-icon">🔬</div>
+            <h3 class="benefit-title">Pharmaceutical-Grade Purity</h3>
+            <p class="benefit-description">
+              We apply the same rigorous quality control and testing protocols
+              used for our prescription medications to our wellness line.
+            </p>
+          </div>
+
+          <div class="benefit-item">
+            <div class="benefit-icon">🌱</div>
+            <h3 class="benefit-title">Sustainable & Ethical Sourcing</h3>
+            <p class="benefit-description">
+              Committed to environmental responsibility, we ethically source raw
+              materials and minimize our manufacturing footprint.
+            </p>
+          </div>
+
+          <div class="benefit-item">
+            <div class="benefit-icon">🔒</div>
+            <h3 class="benefit-title">Transparent Testing</h3>
+            <p class="benefit-description">
+              Full ingredient disclosure and third-party testing ensure you know
+              exactly what you are putting into your body.
+            </p>
+          </div>
+
+          <div class="benefit-item">
+            <div class="benefit-icon">📈</div>
+            <h3 class="benefit-title">Optimized Absorption</h3>
+            <p class="benefit-description">
+              Utilizing advanced delivery systems to maximize bioavailability
+              and effectiveness of active ingredients.
+            </p>
+          </div>
+
+          <div class="benefit-item">
+            <div class="benefit-icon">👨‍⚕️</div>
+            <h3 class="benefit-title">Doctor Recommended</h3>
+            <p class="benefit-description">
+              Trusted by healthcare professionals who recommend Stackly products
+              for their patients' long-term health goals.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. Quality and Certifications -->
+      <section class="quality-section">
+        <h2 class="section-title">Quality & <span>Certifications</span></h2>
+        <div class="quality-content">
+          <article class="quality-card glass-card" style="text-align: center">
+            <img
+              class="certification-icon"
+              src="./assets/con5.webp"
+              alt="GMP Certification Icon"
+            />
+            <h3>cGMP Manufacturing</h3>
+            <p style="color: var(--muted); margin-bottom: 15px">
+              All products are manufactured in facilities that meet or exceed
+              current Good Manufacturing Practice (cGMP) guidelines set by the
+              FDA.
+            </p>
+          </article>
+
+          <article class="quality-card glass-card" style="text-align: center">
+            <img
+              class="certification-icon"
+              src="./assets/con6.webp"
+              alt="ISO Certification Icon"
+            />
+            <h3>Purity Milestones</h3>
+            <ul>
+              <li>ISO 9001:2015 Certified</li>
+              <li>Non-GMO Verified Ingredients</li>
+              <li>Heavy Metal Tested (Triple-Check)</li>
+              <li>Gluten and Allergen-Free Production</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- 5. Call-to-Action Section -->
+      <section class="cta-section">
+        <div class="cta-card glass-card">
+          <h3 class="cta-title" style="color: var(--text-light)">
+            Explore the Intersection of Science and Wellness.
+          </h3>
+          <p style="color: var(--muted)">
+            View our full collection of expertly formulated health and wellness
+            products today.
+          </p>
+          <a href="./404.html" class="cta-button">View the Collection</a>
+        </div>
+      </section>
+    </main>
+    <footer class="glass-footer">
+      <div class="footer-container">
+        <div class="footer-section logo-section">
+          <a href="./index.html" class="logo-link">
+            <img
+              src="./assets/logo.png"
+              alt="STACKLY Logo"
+              class="footer-logo"
+              onerror="this.onerror=null;this.src='https://placehold.co/180x45/38f8ac/111827?text=GlowForge+Logo'"
+            />
+          </a>
+          <p class="copyright">&copy; 2025 GlowForge. All rights reserved.</p>
+        </div>
+
+        <div class="footer-section quick-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="./index.html">HOME</a></li>
+            <li><a href="./blog.html">BLOG</a></li>
+            <li><a href="./contact.html">CONTACT</a></li>
+            <li><a href="./about.html">WHO WE ARE</a></li>
+            <li><a href="./service.html">WHAT WE DO</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section company-info">
+          <h3>Contact</h3>
+          <p>
+            <i class="fas fa-map-marker-alt"></i> 111 Neon Drive, New York, NY
+          </p>
+          <p><i class="fas fa-phone"></i> +1 (212) 555-GLOW</p>
+          <p><i class="fas fa-envelope"></i> support@glowforge.com</p>
+          <p><i class="fas fa-clock"></i> Mon - Fri: 9am - 5pm EST</p>
+        </div>
+
+        <div class="footer-section follow-newsletter">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="./404.html" aria-label="LinkedIn"
+              ><i class="fab fa-linkedin icon-glow"></i
+            ></a>
+            <a href="./404.html" aria-label="Twitter"
+              ><i class="fab fa-twitter icon-glow"></i
+            ></a>
+            <a href="./404.html" aria-label="Instagram"
+              ><i class="fab fa-instagram icon-glow"></i
+            ></a>
+            <a href="./404.html" aria-label="Discord"
+              ><i class="fab fa-discord icon-glow"></i
+            ></a>
+          </div>
+
+          <h3 class="newsletter-title">Stay Connected</h3>
+          <form
+            id="newsletter-form"
+            class="newsletter-form"
+            action="./404.html"
+          >
+            <input
+              type="email"
+              id="email-input"
+              placeholder="Your Email Address"
+              required
+            />
+            <button type="submit" id="newsletter-submit" class="neon-button">
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+    </footer>
+    <script src="./nav.js"></script>
+  </body>
+</html>

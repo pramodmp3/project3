@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact — Neon NYC</title>
+    <link rel="stylesheet" href="contact.css" />
+    <!-- Font Awesome 6.5.2 (Latest Stable) -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="./index.html" class="logo">
+        <!-- Placeholder Logo -->
+        <img
+          src="./assets/logo.png"
+          alt="STACKLY Logo"
+          onerror="this.onerror=null;this.src='https://placehold.co/150x40/38f8ac/111827?text=GlowForge'"
+        />
+      </a>
+
+      <!-- Hamburger Icon for Mobile -->
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+
+      <!-- Navigation Menu -->
+      <ul class="nav-menu">
+        <!-- HOME Dropdown -->
+        <li class="nav-item dropdown">
+          <a href="./index.html" class="nav-link"
+            >HOME <i class="fas fa-chevron-down dropdown-arrow"></i
+          ></a>
+          <ul class="dropdown-content">
+            <li><a href="./home2.html">HOME2</a></li>
+          </ul>
+        </li>
+
+        <!-- SERVICES Dropdown -->
+        <li class="nav-item dropdown">
+          <a href="./service.html" class="nav-link"
+            >WHAT WE DO <i class="fas fa-chevron-down dropdown-arrow"></i
+          ></a>
+          <ul class="dropdown-content">
+            <li><a href="./gen.html">Generics</a></li>
+            <li><a href="./api.html">APIs</a></li>
+            <li><a href="./med.html">Innovative Medicines</a></li>
+            <li><a href="./consumer.html">Consumer Health</a></li>
+          </ul>
+        </li>
+
+        <!-- ABOUT Dropdown -->
+        <li class="nav-item dropdown">
+          <a href="./about.html" class="nav-link"
+            >WHO WE ARE <i class="fas fa-chevron-down dropdown-arrow"></i
+          ></a>
+          <ul class="dropdown-content">
+            <li><a href="./about.html">About US</a></li>
+            <li><a href="./members.html">Members</a></li>
+            <li><a href="./faq.html">FAQs</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a href="./blog.html" class="nav-link">BLOG</a>
+        </li>
+        <li class="nav-item">
+          <a href="./dash.html" class="nav-link">DASHBOARD</a>
+        </li>
+        <li class="nav-item">
+          <a href="contact.html" class="nav-link">CONTACT</a>
+        </li>
+
+        <!-- Login Button -->
+        <li class="nav-item">
+          <a href="./login.html" class="login-button">
+            <span>LOG IN</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!-- Animated background: gradient and glowing particles -->
+    <div class="background">
+      <div class="gradient"></div>
+      <div class="particles"></div>
+    </div>
+
+    <!-- Main wrapper ensures perfect centering -->
+    <main class="contact-wrapper">
+      <section class="contact-container">
+        <!-- Neon heading with subtle text shadow -->
+        <header class="contact-header">
+          <h1>Contact Us</h1>
+          <p>We’d love to hear from you. Let’s connect in neon.</p>
+        </header>
+
+        <!-- Responsive two-column: form + map on desktop; stacked on mobile -->
+        <div class="content-grid">
+          <!-- Glassmorphism contact form -->
+          <form
+            id="contactForm"
+            class="contact-form"
+            novalidate
+            action="./404.html"
+          >
+            <!-- Name -->
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your full name"
+                required
+                autocomplete="name"
+              />
+              <span class="input-hint">Enter your name</span>
+              <span class="error-msg">Please enter your name.</span>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="name@example.com"
+                required
+                autocomplete="email"
+              />
+              <span class="input-hint">We’ll keep it private</span>
+              <span class="error-msg">Please enter a valid email.</span>
+            </div>
+
+            <!-- Phone -->
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="+1 (___) ___-____"
+                autocomplete="tel"
+              />
+              <span class="input-hint">Optional</span>
+              <span class="error-msg">Please enter a valid phone number.</span>
+            </div>
+
+            <!-- Subject -->
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                placeholder="How can we help?"
+                required
+              />
+              <span class="input-hint">Briefly describe your topic</span>
+              <span class="error-msg">Subject can’t be empty.</span>
+            </div>
+
+            <!-- Message -->
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Write your message..."
+                rows="5"
+                required
+              ></textarea>
+              <span class="input-hint"
+                >Share details so we can respond well</span
+              >
+              <span class="error-msg">Message can’t be empty.</span>
+            </div>
+
+            <!-- File attachment -->
+            <div class="form-group file-group">
+              <label for="attachment">Attachment</label>
+              <input
+                type="file"
+                id="attachment"
+                name="attachment"
+                accept=".pdf,.png,.jpg,.jpeg,.doc,.docx"
+              />
+              <span class="input-hint">Attach relevant files (optional)</span>
+            </div>
+
+            <!-- Submit -->
+            <button type="submit" class="neon-btn">Send Message</button>
+
+            <!-- Success / error toasts (animated via JS) -->
+            <div id="formStatus" class="form-status" aria-live="polite"></div>
+          </form>
+
+          <!-- NYC Map with subtle border and shadow; iframe keeps things pure HTML/JS -->
+          <aside class="map-wrap">
+            <div class="map-card">
+              <iframe
+                title="Map of New York City"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps?q=New+York+City&output=embed"
+              ></iframe>
+            </div>
+
+            <!-- Contact info with social icons -->
+            <div class="info-card">
+              <h2>Contact info</h2>
+              <ul class="info-list">
+                <li>
+                  <span class="label">Address:</span>
+                  <span>New York City, NY</span>
+                </li>
+                <li>
+                  <span class="label">Phone:</span>
+                  <a href="tel:+12125551234">+1 (212) 555-1234</a>
+                </li>
+                <li>
+                  <span class="label">Email:</span>
+                  <a href="mailto:hello@neonnyc.com">hello@neonnyc.com</a>
+                </li>
+              </ul>
+
+              <!-- Inline SVG social icons with neon hover -->
+              <div class="social-icons">
+                <a href="#" aria-label="LinkedIn"
+                  ><i class="fab fa-linkedin icon-glow"></i
+                ></a>
+                <a href="#" aria-label="Twitter"
+                  ><i class="fab fa-twitter icon-glow"></i
+                ></a>
+                <a href="#" aria-label="Github"
+                  ><i class="fab fa-github icon-glow"></i
+                ></a>
+                <a href="#" aria-label="Discord"
+                  ><i class="fab fa-discord icon-glow"></i
+                ></a>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+    <footer class="glass-footer">
+      <div class="footer-container">
+        <div class="footer-section logo-section">
+          <a href="./index.html" class="logo-link">
+            <img
+              src="./assets/logo.png"
+              alt="STACKLY Logo"
+              class="footer-logo"
+              onerror="this.onerror=null;this.src='https://placehold.co/180x45/38f8ac/111827?text=GlowForge+Logo'"
+            />
+          </a>
+          <p class="copyright">&copy; 2025 GlowForge. All rights reserved.</p>
+        </div>
+
+        <div class="footer-section quick-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="./index.html">HOME</a></li>
+            <li><a href="./blog.html">BLOG</a></li>
+            <li><a href="./contact.html">CONTACT</a></li>
+            <li><a href="./about.html">WHO WE ARE</a></li>
+            <li><a href="./service.html">WHAT WE DO</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section company-info">
+          <h3>Contact</h3>
+          <p>
+            <i class="fas fa-map-marker-alt"></i> 111 Neon Drive, New York, NY
+          </p>
+          <p><i class="fas fa-phone"></i> +1 (212) 555-GLOW</p>
+          <p><i class="fas fa-envelope"></i> support@glowforge.com</p>
+          <p><i class="fas fa-clock"></i> Mon - Fri: 9am - 5pm EST</p>
+        </div>
+
+        <div class="footer-section follow-newsletter">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="./404.html" aria-label="LinkedIn"
+              ><i class="fab fa-linkedin icon-glow"></i
+            ></a>
+            <a href="./404.html" aria-label="Twitter"
+              ><i class="fab fa-twitter icon-glow"></i
+            ></a>
+            <a href="./404.html" aria-label="Instagram"
+              ><i class="fab fa-instagram icon-glow"></i
+            ></a>
+            <a href="./404.html" aria-label="Discord"
+              ><i class="fab fa-discord icon-glow"></i
+            ></a>
+          </div>
+
+          <h3 class="newsletter-title">Stay Connected</h3>
+          <form
+            id="newsletter-form"
+            class="newsletter-form"
+            action="./404.html"
+          >
+            <input
+              type="email"
+              id="email-input"
+              placeholder="Your Email Address"
+              required
+            />
+            <button type="submit" id="newsletter-submit" class="neon-button">
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+    </footer>
+    <!-- <script src="contact.js"></script> -->
+    <script src="./nav.js"></script>
+    <!-- <script src="./footer.js"></script> -->
+  </body>
+</html>

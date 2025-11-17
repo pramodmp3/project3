@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stackly Pharma — FAQ</title>
+    <!-- Link to the external stylesheet -->
+    <link rel="stylesheet" href="faq.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="./index.html" class="logo">
+        <!-- Placeholder Logo -->
+        <img
+          src="./assets/logo.png"
+          alt="STACKLY Logo"
+          onerror="this.onerror=null;this.src='https://placehold.co/150x40/38f8ac/111827?text=GlowForge'"
+        />
+      </a>
+
+      <!-- Hamburger Icon for Mobile -->
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+
+      <!-- Navigation Menu -->
+      <ul class="nav-menu">
+        <!-- HOME Dropdown -->
+        <li class="nav-item dropdown">
+          <a href="./index.html" class="nav-link"
+            >HOME <i class="fas fa-chevron-down dropdown-arrow"></i
+          ></a>
+          <ul class="dropdown-content">
+            <li><a href="./home2.html">HOME2</a></li>
+          </ul>
+        </li>
+
+        <!-- SERVICES Dropdown -->
+        <li class="nav-item dropdown">
+          <a href="./service.html" class="nav-link"
+            >WHAT WE DO <i class="fas fa-chevron-down dropdown-arrow"></i
+          ></a>
+          <ul class="dropdown-content">
+            <li><a href="./gen.html">Generics</a></li>
+            <li><a href="./api.html">APIs</a></li>
+            <li><a href="./med.html">Innovative Medicines</a></li>
+            <li><a href="./consumer.html">Consumer Health</a></li>
+          </ul>
+        </li>
+
+        <!-- ABOUT Dropdown -->
+        <li class="nav-item dropdown">
+          <a href="./about.html" class="nav-link"
+            >WHO WE ARE <i class="fas fa-chevron-down dropdown-arrow"></i
+          ></a>
+          <ul class="dropdown-content">
+            <li><a href="./about.html">About US</a></li>
+            <li><a href="./members.html">Members</a></li>
+            <li><a href="./faq.html">FAQs</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a href="./blog.html" class="nav-link">BLOG</a>
+        </li>
+        <li class="nav-item">
+          <a href="./dash.html" class="nav-link">DASHBOARD</a>
+        </li>
+        <li class="nav-item">
+          <a href="contact.html" class="nav-link">CONTACT</a>
+        </li>
+
+        <!-- Login Button -->
+        <li class="nav-item">
+          <a href="./login.html" class="login-button">
+            <span>LOG IN</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main class="container">
+      <header class="page-header">
+        <h1 class="main-heading">Frequently Asked Questions</h1>
+        <p class="sub-heading">
+          Answers concerning our research, compliance, and commitment to
+          innovation in the biotech sector.
+        </p>
+      </header>
+
+      <div class="accordion">
+        <!-- FAQ Item 1 -->
+        <div class="accordion-item">
+          <input type="checkbox" id="faq1" class="accordion-input" />
+          <label for="faq1" class="accordion-label"
+            >What is Stackly Pharma's core focus in R&D?</label
+          >
+          <div class="answer-panel">
+            <div class="answer-content">
+              Our core focus is on **novel small molecule compounds** and
+              **advanced gene therapy vectors**. We utilize proprietary AI
+              platforms to accelerate target identification and synthesis,
+              prioritizing precision medicine outcomes.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ Item 2 -->
+        <div class="accordion-item">
+          <input type="checkbox" id="faq2" class="accordion-input" />
+          <label for="faq2" class="accordion-label"
+            >How do you ensure drug efficacy and safety?</label
+          >
+          <div class="answer-panel">
+            <div class="answer-content">
+              Safety and efficacy are ensured through rigorous **Phase 0 to
+              Phase III clinical trials**, validated by independent CROs, and
+              adhering strictly to ICH-GCP guidelines. Preclinical testing
+              involves extensive in-vitro and in-vivo modeling.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ Item 3 -->
+        <div class="accordion-item">
+          <input type="checkbox" id="faq3" class="accordion-input" />
+          <label for="faq3" class="accordion-label"
+            >Are you compliant with global regulatory bodies (FDA, EMA)?</label
+          >
+          <div class="answer-panel">
+            <div class="answer-content">
+              Yes. Stackly maintains continuous compliance with the **FDA
+              (U.S.)**, **EMA (Europe)**, and all regional regulatory
+              authorities. Our Quality Assurance team enforces strict GMP (Good
+              Manufacturing Practice) standards.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ Item 4 -->
+        <div class="accordion-item">
+          <input type="checkbox" id="faq4" class="accordion-input" />
+          <label for="faq4" class="accordion-label"
+            >What role does AI play in your drug discovery process?</label
+          >
+          <div class="answer-panel">
+            <div class="answer-content">
+              AI is fundamental to our process, used for **predictive
+              toxicology**, high-throughput virtual screening, and optimizing
+              synthesis pathways, significantly reducing the time required to
+              advance candidates to preclinical stages.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ Item 5 -->
+        <div class="accordion-item">
+          <input type="checkbox" id="faq5" class="accordion-input" />
+          <label for="faq5" class="accordion-label"
+            >Can I participate in a Stackly clinical trial?</label
+          >
+          <div class="answer-panel">
+            <div class="answer-content">
+              Eligibility depends on the specific therapeutic area and trial
+              phase. Please visit the **Clinical Trials** section of our
+              official website or consult with your healthcare provider for
+              current enrollment information.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ Item 6 -->
+        <div class="accordion-item">
+          <input type="checkbox" id="faq6" class="accordion-input" />
+          <label for="faq6" class="accordion-label"
+            >What are your manufacturing standards?</label
+          >
+          <div class="answer-panel">
+            <div class="answer-content">
+              We operate fully automated, state-of-the-art facilities that meet
+              **cGMP (current Good Manufacturing Practice)** standards, focusing
+              on continuous flow chemistry for purity and scalability.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ Item 7 -->
+        <div class="accordion-item">
+          <input type="checkbox" id="faq7" class="accordion-input" />
+          <label for="faq7" class="accordion-label"
+            >Does Stackly pursue sustainable pharmaceutical practices?</label
+          >
+          <div class="answer-panel">
+            <div class="answer-content">
+              Sustainability is a priority. We employ **green chemistry
+              principles**, reduce waste through optimized synthesis routes, and
+              minimize the environmental footprint of our research labs and
+              facilities.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ Item 8 -->
+        <div class="accordion-item">
+          <input type="checkbox" id="faq8" class="accordion-input" />
+          <label for="faq8" class="accordion-label"
+            >How do you manage data security for proprietary research?</label
+          >
+          <div class="answer-panel">
+            <div class="answer-content">
+              All proprietary research data is protected by **end-to-end
+              encryption**, multi-factor authentication, and secure, isolated
+              cloud environments compliant with global data protection
+              regulations (e.g., GDPR, HIPAA).
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ Item 9 -->
+        <div class="accordion-item">
+          <input type="checkbox" id="faq9" class="accordion-input" />
+          <label for="faq9" class="accordion-label"
+            >Which therapeutic areas are you currently focused on?</label
+          >
+          <div class="answer-panel">
+            <div class="answer-content">
+              Our primary therapeutic pipelines target **neurodegenerative
+              diseases**, oncology (specifically novel immunotherapies), and
+              rare genetic disorders.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ Item 10 -->
+        <div class="accordion-item">
+          <input type="checkbox" id="faq10" class="accordion-input" />
+          <label for="faq10" class="accordion-label"
+            >What is the expected timeline for a drug candidate?</label
+          >
+          <div class="answer-panel">
+            <div class="answer-content">
+              Drug development timelines vary, but typically range from **10 to
+              15 years** from initial discovery to regulatory approval,
+              including extensive preclinical and clinical phases.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ Item 11 -->
+        <div class="accordion-item">
+          <input type="checkbox" id="faq11" class="accordion-input" />
+          <label for="faq11" class="accordion-label"
+            >Do you offer collaborations with academic institutions?</label
+          >
+          <div class="answer-panel">
+            <div class="answer-content">
+              Yes, collaboration with leading **academic research centers** is
+              essential. We actively seek partnerships through our R&D outreach
+              program to explore new mechanistic pathways.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ Item 12 -->
+        <div class="accordion-item">
+          <input type="checkbox" id="faq12" class="accordion-input" />
+          <label for="faq12" class="accordion-label"
+            >How are clinical investigators selected?</label
+          >
+          <div class="answer-panel">
+            <div class="answer-content">
+              Investigators are selected based on their **expertise, track
+              record** in the relevant therapeutic area, ethical conduct, and
+              access to the required patient populations and facilities.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ Item 13 -->
+        <div class="accordion-item">
+          <input type="checkbox" id="faq13" class="accordion-input" />
+          <label for="faq13" class="accordion-label"
+            >What is a Biologics License Application (BLA)?</label
+          >
+          <div class="answer-panel">
+            <div class="answer-content">
+              The BLA is an application submitted to the FDA for permission to
+              introduce or deliver a **biological product** (like vaccines or
+              therapeutic proteins) into interstate commerce.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ Item 14 -->
+        <div class="accordion-item">
+          <input type="checkbox" id="faq14" class="accordion-input" />
+          <label for="faq14" class="accordion-label"
+            >Where are Stackly's headquarters located?</label
+          >
+          <div class="answer-panel">
+            <div class="answer-content">
+              Our primary corporate and R&D headquarters are situated in the
+              **Boston/Cambridge biotechnology cluster**, with satellite
+              facilities in major global research hubs.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ Item 15 -->
+        <div class="accordion-item">
+          <input type="checkbox" id="faq15" class="accordion-input" />
+          <label for="faq15" class="accordion-label"
+            >How can I contact the media relations team?</label
+          >
+          <div class="answer-panel">
+            <div class="answer-content">
+              For all media inquiries, please direct your requests to
+              **media@stacklypharma.com**. Please allow 24-48 hours for a
+              response from our communications department.
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="glass-footer">
+      <div class="footer-container">
+        <div class="footer-section logo-section">
+          <a href="./index.html" class="logo-link">
+            <img
+              src="./assets/logo.png"
+              alt="STACKLY Logo"
+              class="footer-logo"
+              onerror="this.onerror=null;this.src='https://placehold.co/180x45/38f8ac/111827?text=GlowForge+Logo'"
+            />
+          </a>
+          <p class="copyright">&copy; 2025 GlowForge. All rights reserved.</p>
+        </div>
+
+        <div class="footer-section quick-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="./index.html">HOME</a></li>
+            <li><a href="./blog.html">BLOG</a></li>
+            <li><a href="./contact.html">CONTACT</a></li>
+            <li><a href="./about.html">WHO WE ARE</a></li>
+            <li><a href="./service.html">WHAT WE DO</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section company-info">
+          <h3>Contact</h3>
+          <p>
+            <i class="fas fa-map-marker-alt"></i> 111 Neon Drive, New York, NY
+          </p>
+          <p><i class="fas fa-phone"></i> +1 (212) 555-GLOW</p>
+          <p><i class="fas fa-envelope"></i> support@glowforge.com</p>
+          <p><i class="fas fa-clock"></i> Mon - Fri: 9am - 5pm EST</p>
+        </div>
+
+        <div class="footer-section follow-newsletter">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="./404.html" aria-label="LinkedIn"
+              ><i class="fab fa-linkedin icon-glow"></i
+            ></a>
+            <a href="./404.html" aria-label="Twitter"
+              ><i class="fab fa-twitter icon-glow"></i
+            ></a>
+            <a href="./404.html" aria-label="Instagram"
+              ><i class="fab fa-instagram icon-glow"></i
+            ></a>
+            <a href="./404.html" aria-label="Discord"
+              ><i class="fab fa-discord icon-glow"></i
+            ></a>
+          </div>
+
+          <h3 class="newsletter-title">Stay Connected</h3>
+          <form
+            id="newsletter-form"
+            class="newsletter-form"
+            action="./404.html"
+          >
+            <input
+              type="email"
+              id="email-input"
+              placeholder="Your Email Address"
+              required
+            />
+            <button type="submit" id="newsletter-submit" class="neon-button">
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+    </footer>
+    <script src="./nav.js"></script>
+    <script src="./footer.js"></script>
+  </body>
+</html>

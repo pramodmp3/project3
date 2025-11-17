@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stackly Pharma — Neon Dashboard</title>
+    <!-- Link External CSS -->
+    <link rel="stylesheet" href="dash.css" />
+    <!-- Load Inter Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="./index.html" class="logo">
+        <!-- Placeholder Logo -->
+        <img
+          src="./assets/logo.png"
+          alt="STACKLY Logo"
+          onerror="this.onerror=null;this.src='https://placehold.co/150x40/38f8ac/111827?text=GlowForge'"
+        />
+      </a>
+
+      <!-- Hamburger Icon for Mobile -->
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+
+      <!-- Navigation Menu -->
+      <ul class="nav-menu">
+        <!-- HOME Dropdown -->
+        <li class="nav-item dropdown">
+          <a href="./index.html" class="nav-link"
+            >HOME <i class="fas fa-chevron-down dropdown-arrow"></i
+          ></a>
+          <ul class="dropdown-content">
+            <li><a href="./home2.html">HOME2</a></li>
+          </ul>
+        </li>
+
+        <!-- SERVICES Dropdown -->
+        <li class="nav-item dropdown">
+          <a href="./service.html" class="nav-link"
+            >WHAT WE DO <i class="fas fa-chevron-down dropdown-arrow"></i
+          ></a>
+          <ul class="dropdown-content">
+            <li><a href="./gen.html">Generics</a></li>
+            <li><a href="./api.html">APIs</a></li>
+            <li><a href="./med.html">Innovative Medicines</a></li>
+            <li><a href="./consumer.html">Consumer Health</a></li>
+          </ul>
+        </li>
+
+        <!-- ABOUT Dropdown -->
+        <li class="nav-item dropdown">
+          <a href="./about.html" class="nav-link"
+            >WHO WE ARE <i class="fas fa-chevron-down dropdown-arrow"></i
+          ></a>
+          <ul class="dropdown-content">
+            <li><a href="./about.html">About US</a></li>
+            <li><a href="./members.html">Members</a></li>
+            <li><a href="./faq.html">FAQs</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a href="./blog.html" class="nav-link">BLOG</a>
+        </li>
+        <li class="nav-item">
+          <a href="./dash.html" class="nav-link">DASHBOARD</a>
+        </li>
+        <li class="nav-item">
+          <a href="contact.html" class="nav-link">CONTACT</a>
+        </li>
+
+        <!-- Login Button -->
+        <li class="nav-item">
+          <a href="./login.html" class="login-button">
+            <span>LOG IN</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div class="container">
+      <h1 class="heading-1">Stackly System Dashboard</h1>
+
+      <!-- ======================================= -->
+      <!-- Section 1: Analytics Metrics -->
+      <!-- ======================================= -->
+      <section>
+        <h2 class="section-heading">Operational Metrics</h2>
+        <div class="analytics-grid">
+          <div class="card metric-card">
+            <div class="value">9,421</div>
+            <div class="label">Active Users</div>
+          </div>
+
+          <div class="card metric-card">
+            <div class="value">1,354</div>
+            <div class="label">Pending Orders</div>
+          </div>
+
+          <div class="card metric-card">
+            <div class="value">$1.4M</div>
+            <div class="label">YTD Revenue</div>
+          </div>
+
+          <div class="card metric-card">
+            <div class="value">18</div>
+            <div class="label">Critical Alerts</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================= -->
+      <!-- Section 2: Charts -->
+      <!-- ======================================= -->
+      <section>
+        <h2 class="section-heading">Data Visualization</h2>
+        <div class="charts-grid">
+          <div class="card">
+            <h3 class="chart-title">Quarterly R&D Spend</h3>
+            <div class="chart-placeholder">
+              <img src="./assets/d1.webp" alt="" />
+            </div>
+          </div>
+
+          <div class="card">
+            <h3 class="chart-title">Drug Efficacy Trend</h3>
+            <div class="chart-placeholder">
+              <img src="./assets/d2.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================= -->
+      <!-- Section 3: User Management Table -->
+      <!-- ======================================= -->
+      <section>
+        <h2 class="section-heading">User Matrix Access</h2>
+        <div class="card table-container">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Role</th>
+                <th>Last Login</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Dr. E. Vance</td>
+                <td>e.vance@stackly.com</td>
+                <td><span class="badge admin">Admin</span></td>
+                <td>Today, 09:30</td>
+                <td><span class="badge active">Active</span></td>
+              </tr>
+              <tr>
+                <td>L. Chen</td>
+                <td>l.chen@stackly.com</td>
+                <td>Research Lead</td>
+                <td>Yesterday</td>
+                <td><span class="badge active">Active</span></td>
+              </tr>
+              <tr>
+                <td>J. Patel</td>
+                <td>j.patel@stackly.com</td>
+                <td><span class="badge research">Research</span></td>
+                <td>3 days ago</td>
+                <td><span class="badge pending">Pending</span></td>
+              </tr>
+              <tr>
+                <td>M. Singh</td>
+                <td>m.singh@stackly.com</td>
+                <td>Logistics</td>
+                <td>Today, 11:15</td>
+                <td><span class="badge active">Active</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- ======================================= -->
+      <!-- Section 4: Orders Table -->
+      <!-- ======================================= -->
+      <section>
+        <h2 class="section-heading">Supply Chain Status</h2>
+        <div class="card table-container">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Order ID</th>
+                <th>Client/User</th>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>STK-645A</td>
+                <td>UCLA Labs</td>
+                <td>Nano-Lipid Carriers</td>
+                <td>20 Units</td>
+                <td><span class="badge complete">Complete</span></td>
+              </tr>
+              <tr>
+                <td>STK-645B</td>
+                <td>J. Patel</td>
+                <td>Compound Z (Internal)</td>
+                <td>500g</td>
+                <td><span class="badge research">Research</span></td>
+              </tr>
+              <tr>
+                <td>STK-645C</td>
+                <td>Global Health Org.</td>
+                <td>Vaccine Subunit Prod.</td>
+                <td>Bulk</td>
+                <td><span class="badge pending">Pending</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- ======================================= -->
+      <!-- Section 5: Messages -->
+      <!-- ======================================= -->
+      <section>
+        <h2 class="section-heading">Encrypted Communications</h2>
+        <div class="card">
+          <ul class="message-list">
+            <li class="message-item">
+              <span class="message-sender">A. Singh (Compliance)</span>
+              <p class="message-excerpt">
+                Final audit report available in drive X-7.
+              </p>
+            </li>
+            <li class="message-item">
+              <span class="message-sender">System Alert</span>
+              <p class="message-excerpt">
+                High CPU load detected on analysis server 3. Review required.
+              </p>
+            </li>
+            <li class="message-item">
+              <span class="message-sender">L. Chen (Research)</span>
+              <p class="message-excerpt">
+                Requesting access to the Phase I trial data for compound D-12.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer class="glass-footer">
+      <div class="footer-container">
+        <div class="footer-section logo-section">
+          <a href="./index.html" class="logo-link">
+            <img
+              src="./assets/logo.png"
+              alt="STACKLY Logo"
+              class="footer-logo"
+              onerror="this.onerror=null;this.src='https://placehold.co/180x45/38f8ac/111827?text=GlowForge+Logo'"
+            />
+          </a>
+          <p class="copyright">&copy; 2025 GlowForge. All rights reserved.</p>
+        </div>
+
+        <div class="footer-section quick-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="./index.html">HOME</a></li>
+            <li><a href="./blog.html">BLOG</a></li>
+            <li><a href="./contact.html">CONTACT</a></li>
+            <li><a href="./about.html">WHO WE ARE</a></li>
+            <li><a href="./service.html">WHAT WE DO</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section company-info">
+          <h3>Contact</h3>
+          <p>
+            <i class="fas fa-map-marker-alt"></i> 111 Neon Drive, New York, NY
+          </p>
+          <p><i class="fas fa-phone"></i> +1 (212) 555-GLOW</p>
+          <p><i class="fas fa-envelope"></i> support@glowforge.com</p>
+          <p><i class="fas fa-clock"></i> Mon - Fri: 9am - 5pm EST</p>
+        </div>
+
+        <div class="footer-section follow-newsletter">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="./404.html" aria-label="LinkedIn"
+              ><i class="fab fa-linkedin icon-glow"></i
+            ></a>
+            <a href="./404.html" aria-label="Twitter"
+              ><i class="fab fa-twitter icon-glow"></i
+            ></a>
+            <a href="./404.html" aria-label="Instagram"
+              ><i class="fab fa-instagram icon-glow"></i
+            ></a>
+            <a href="./404.html" aria-label="Discord"
+              ><i class="fab fa-discord icon-glow"></i
+            ></a>
+          </div>
+
+          <h3 class="newsletter-title">Stay Connected</h3>
+          <form
+            id="newsletter-form"
+            class="newsletter-form"
+            action="./404.html"
+          >
+            <input
+              type="email"
+              id="email-input"
+              placeholder="Your Email Address"
+              required
+            />
+            <button type="submit" id="newsletter-submit" class="neon-button">
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+    </footer>
+    <script src="./nav.js"></script>
+    <!-- <script src="./footer.js"></script> -->
+  </body>
+</html>

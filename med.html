@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stackly Pharma — Innovative Medicines</title>
+    <!-- Link to the external stylesheet -->
+    <link rel="stylesheet" href="med.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="./index.html" class="logo">
+        <!-- Placeholder Logo -->
+        <img
+          src="./assets/logo.png"
+          alt="STACKLY Logo"
+          onerror="this.onerror=null;this.src='https://placehold.co/150x40/38f8ac/111827?text=GlowForge'"
+        />
+      </a>
+
+      <!-- Hamburger Icon for Mobile -->
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+
+      <!-- Navigation Menu -->
+      <ul class="nav-menu">
+        <!-- HOME Dropdown -->
+        <li class="nav-item dropdown">
+          <a href="./index.html" class="nav-link"
+            >HOME <i class="fas fa-chevron-down dropdown-arrow"></i
+          ></a>
+          <ul class="dropdown-content">
+            <li><a href="./home2.html">HOME2</a></li>
+          </ul>
+        </li>
+
+        <!-- SERVICES Dropdown -->
+        <li class="nav-item dropdown">
+          <a href="./service.html" class="nav-link"
+            >WHAT WE DO <i class="fas fa-chevron-down dropdown-arrow"></i
+          ></a>
+          <ul class="dropdown-content">
+            <li><a href="./gen.html">Generics</a></li>
+            <li><a href="./api.html">APIs</a></li>
+            <li><a href="./med.html">Innovative Medicines</a></li>
+            <li><a href="./consumer.html">Consumer Health</a></li>
+          </ul>
+        </li>
+
+        <!-- ABOUT Dropdown -->
+        <li class="nav-item dropdown">
+          <a href="./about.html" class="nav-link"
+            >WHO WE ARE <i class="fas fa-chevron-down dropdown-arrow"></i
+          ></a>
+          <ul class="dropdown-content">
+            <li><a href="./about.html">About US</a></li>
+            <li><a href="./members.html">Members</a></li>
+            <li><a href="./faq.html">FAQs</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a href="./blog.html" class="nav-link">BLOG</a>
+        </li>
+        <li class="nav-item">
+          <a href="./dash.html" class="nav-link">DASHBOARD</a>
+        </li>
+        <li class="nav-item">
+          <a href="contact.html" class="nav-link">CONTACT</a>
+        </li>
+
+        <!-- Login Button -->
+        <li class="nav-item">
+          <a href="./login.html" class="login-button">
+            <span>LOG IN</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main class="container">
+      <!-- 1. Hero Section -->
+      <section class="hero-section section-animate">
+        <h1 class="main-heading">Innovative <span>Medicines</span></h1>
+        <h2 class="sub-heading">
+          Leading the next wave of therapeutics through data-driven discovery
+          and precision targeting.
+        </h2>
+      </section>
+
+      <!-- 2. Overview of Innovative Medicines -->
+      <section class="overview-section section-animate">
+        <h3 class="section-title">Featured <span>Breakthroughs</span></h3>
+        <div class="medicine-grid">
+          <!-- Featured Medicine Card 1 -->
+          <div class="glass-card medicine-card">
+            <img
+              src="./assets/med1.webp"
+              alt="Placeholder image for NeuroCure"
+              class="animated-img"
+            />
+            <h4 class="medicine-title">NeuroCure-X</h4>
+            <p class="medicine-description">
+              A novel small-molecule inhibitor targeting key neuro-inflammation
+              pathways, currently in Phase III trials for early-onset
+              Alzheimer's disease.
+            </p>
+          </div>
+
+          <!-- Featured Medicine Card 2 -->
+          <div class="glass-card medicine-card">
+            <img
+              src="./assets/med2.webp"
+              alt="Placeholder image for ImmunoStack"
+              class="animated-img"
+            />
+            <h4 class="medicine-title">ImmunoStack-T</h4>
+            <p class="medicine-description">
+              Our flagship precision oncology therapy utilizing CAR T-cell
+              technology refined by advanced CRISPR gene-editing for solid
+              tumors.
+            </p>
+          </div>
+
+          <!-- Featured Medicine Card 3 -->
+          <div class="glass-card medicine-card">
+            <img
+              src="./assets/med3.webp"
+              alt="Placeholder image for ViroShield"
+              class="animated-img"
+            />
+            <h4 class="medicine-title">ViroShield-5</h4>
+            <p class="medicine-description">
+              A next-generation broad-spectrum antiviral agent developed using
+              proprietary rapid screening and synthesis techniques.
+            </p>
+          </div>
+
+          <!-- Featured Medicine Card 4 (Optional) -->
+          <!-- <div class="glass-card medicine-card">
+            <img
+              src=""
+              alt="Placeholder image for GeneFix"
+              class="animated-img"
+            />
+            <h4 class="medicine-title">GeneFix Alpha</h4>
+            <p class="medicine-description">
+              An in-vivo gene therapy delivered via an optimized AAV vector,
+              designed to correct severe monogenic disorders.
+            </p>
+          </div> -->
+        </div>
+      </section>
+
+      <!-- 3. Research & Development Process -->
+      <section class="rd-process-section section-animate">
+        <h3 class="section-title">Our <span>R&D</span> Pipeline</h3>
+        <div class="glass-card rd-process-grid">
+          <!-- Step 1: Target Identification -->
+          <div class="process-step">
+            <div class="process-icon-wrapper">🎯</div>
+            <h4 class="process-title">Target Identification</h4>
+            <p class="muted">
+              Using AI and high-throughput screening to validate novel
+              therapeutic targets with high confidence and minimal off-target
+              effects.
+            </p>
+          </div>
+
+          <!-- Step 2: Compound Optimization -->
+          <div class="process-step">
+            <div class="process-icon-wrapper">🧪</div>
+            <h4 class="process-title">Compound Optimization</h4>
+            <p class="muted">
+              Refining lead compounds for optimal potency, bioavailability, and
+              safety using computational modeling and medicinal chemistry.
+            </p>
+          </div>
+
+          <!-- Step 3: Preclinical Testing -->
+          <div class="process-step">
+            <div class="process-icon-wrapper">🐁</div>
+            <h4 class="process-title">Preclinical Testing</h4>
+            <p class="muted">
+              Comprehensive in-vitro and in-vivo safety and efficacy studies
+              required prior to human clinical trials.
+            </p>
+          </div>
+
+          <!-- Step 4: Clinical Development -->
+          <div class="process-step">
+            <div class="process-icon-wrapper">🧑‍⚕️</div>
+            <h4 class="process-title">Clinical Development</h4>
+            <p class="muted">
+              Managing Phase I, II, and III trials globally, focusing on patient
+              safety, data integrity, and regulatory compliance.
+            </p>
+          </div>
+
+          <!-- Step 5: Regulatory Filing -->
+          <div class="process-step">
+            <div class="process-icon-wrapper">📜</div>
+            <h4 class="process-title">Regulatory Filing</h4>
+            <p class="muted">
+              Preparing New Drug Applications (NDA) and Biologics License
+              Applications (BLA) for global submission (FDA, EMA, etc.).
+            </p>
+          </div>
+
+          <!-- Step 6: Commercial Launch -->
+          <div class="process-step">
+            <div class="process-icon-wrapper">🚀</div>
+            <h4 class="process-title">Commercial Launch</h4>
+            <p class="muted">
+              Scaling up cGMP manufacturing and distribution to ensure
+              widespread patient access to the new treatment.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. Achievements / Milestones -->
+      <section class="achievements-section section-animate">
+        <h3 class="section-title">Recent <span>Achievements</span></h3>
+        <div class="milestones-grid">
+          <!-- Milestone 1 -->
+          <div class="glass-card milestone-card">
+            <img
+              src="./assets/med4.webp"
+              alt="Placeholder image for milestone 1"
+              class="milestone-image"
+            />
+            <span class="milestone-year">2021 Q4</span>
+            <h4 class="medicine-title">First-in-Human Trial Start</h4>
+            <p class="medicine-description">
+              Initiated Phase I trial for NeuroCure-X, marking a major step in
+              our CNS pipeline.
+            </p>
+          </div>
+
+          <!-- Milestone 2 -->
+          <div class="glass-card milestone-card">
+            <img
+              src="./assets/med5.webp"
+              alt="Placeholder image for milestone 2"
+              class="milestone-image"
+            />
+            <span class="milestone-year">2023 Q1</span>
+            <h4 class="medicine-title">AI Platform Integration</h4>
+            <p class="medicine-description">
+              Successfully integrated our proprietary AI drug design model,
+              reducing hit-to-lead time by 35%.
+            </p>
+          </div>
+
+          <!-- Milestone 3 -->
+          <div class="glass-card milestone-card">
+            <img
+              src="./assets/med6.webp"
+              alt="Placeholder image for milestone 3"
+              class="milestone-image"
+            />
+            <span class="milestone-year">2024 Q3</span>
+            <h4 class="medicine-title">Fast Track Designation</h4>
+            <p class="medicine-description">
+              Received FDA Fast Track status for ImmunoStack-T due to unmet
+              medical need in advanced solid tumors.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. Call to Action Section -->
+      <section class="cta-section section-animate">
+        <div class="cta-card glass-card">
+          <h3 class="section-title" style="margin-bottom: 10px">
+            Partner in <span>Innovation</span>
+          </h3>
+          <p style="color: var(--muted)">
+            Join us in accelerating the discovery and development of
+            life-changing therapies.
+          </p>
+          <a href="./404.html" class="cta-button">Explore Collaborations</a>
+        </div>
+      </section>
+    </main>
+    <footer class="glass-footer">
+      <div class="footer-container">
+        <div class="footer-section logo-section">
+          <a href="./index.html" class="logo-link">
+            <img
+              src="./assets/logo.png"
+              alt="STACKLY Logo"
+              class="footer-logo"
+              onerror="this.onerror=null;this.src='https://placehold.co/180x45/38f8ac/111827?text=GlowForge+Logo'"
+            />
+          </a>
+          <p class="copyright">&copy; 2025 GlowForge. All rights reserved.</p>
+        </div>
+
+        <div class="footer-section quick-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="./index.html">HOME</a></li>
+            <li><a href="./blog.html">BLOG</a></li>
+            <li><a href="./contact.html">CONTACT</a></li>
+            <li><a href="./about.html">WHO WE ARE</a></li>
+            <li><a href="./service.html">WHAT WE DO</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section company-info">
+          <h3>Contact</h3>
+          <p>
+            <i class="fas fa-map-marker-alt"></i> 111 Neon Drive, New York, NY
+          </p>
+          <p><i class="fas fa-phone"></i> +1 (212) 555-GLOW</p>
+          <p><i class="fas fa-envelope"></i> support@glowforge.com</p>
+          <p><i class="fas fa-clock"></i> Mon - Fri: 9am - 5pm EST</p>
+        </div>
+
+        <div class="footer-section follow-newsletter">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="./404.html" aria-label="LinkedIn"
+              ><i class="fab fa-linkedin icon-glow"></i
+            ></a>
+            <a href="./404.html" aria-label="Twitter"
+              ><i class="fab fa-twitter icon-glow"></i
+            ></a>
+            <a href="./404.html" aria-label="Instagram"
+              ><i class="fab fa-instagram icon-glow"></i
+            ></a>
+            <a href="./404.html" aria-label="Discord"
+              ><i class="fab fa-discord icon-glow"></i
+            ></a>
+          </div>
+
+          <h3 class="newsletter-title">Stay Connected</h3>
+          <form
+            id="newsletter-form"
+            class="newsletter-form"
+            action="./404.html"
+          >
+            <input
+              type="email"
+              id="email-input"
+              placeholder="Your Email Address"
+              required
+            />
+            <button type="submit" id="newsletter-submit" class="neon-button">
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+    </footer>
+    <script src="./nav.js"></script>
+    <!-- <script src="./footer.js"></script> -->
+  </body>
+</html>

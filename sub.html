@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stackly Responsive Navbar</title>
+    <link rel="stylesheet" href="sub.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="navbar-header">
+      <nav class="navbar container">
+        <a href="./home2.html" class="logo-link">
+          <img src="./files/logooo.webp" alt="Stackly Logo" class="logo" />
+          <!-- <span class="logo-text">Stackly</span> -->
+        </a>
+
+        <button class="hamburger" aria-label="Toggle navigation menu">
+          <span class="bar bar-1"></span>
+          <span class="bar bar-2"></span>
+          <span class="bar bar-3"></span>
+        </button>
+
+        <ul class="nav-menu">
+          <li class="nav-item has-dropdown" data-dropdown="home">
+            <a href="#home2" class="nav-link nav-link-text">HOME2</a>
+            <button
+              class="dropdown-toggle"
+              aria-expanded="false"
+              aria-controls="dropdown-home"
+            >
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <ul class="dropdown-menu" id="dropdown-home">
+              <li><a href="#home1" class="dropdown-item">HOME1</a></li>
+              <!-- <li><a href="#home2" class="dropdown-item">HOME2</a></li> -->
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a href="#services" class="nav-link">OUR SERVICES</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="#careers" class="nav-link">CAREERS</a>
+          </li>
+
+          <li class="nav-item has-dropdown" data-dropdown="about">
+            <a href="#about" class="nav-link nav-link-text">ABOUT</a>
+            <button
+              class="dropdown-toggle"
+              aria-expanded="false"
+              aria-controls="dropdown-about"
+            >
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <ul class="dropdown-menu" id="dropdown-about">
+              <li><a href="#about-us" class="dropdown-item">ABOUT US</a></li>
+              <li><a href="#global" class="dropdown-item">GLOBAL</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a href="#blog" class="nav-link">BLOG</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="#contact" class="nav-link">CONTACT</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main style="padding-top: 100px; text-align: center">
+      <h1>Stackly Modern Navbar Demo</h1>
+      <p>
+        Resize your browser to see the full responsiveness and center-drop
+        mobile menu animation.
+      </p>
+      <p>The logo source is intentionally left empty as per requirements.</p>
+    </main>
+
+    <script src="sub.js"></script>
+  </body>
+</html>

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stackly Pharma — Generic Medicine Manufacturing</title>
+    <!-- Link to the external stylesheet -->
+    <link rel="stylesheet" href="gen.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="./index.html" class="logo">
+        <!-- Placeholder Logo -->
+        <img
+          src="./assets/logo.png"
+          alt="STACKLY Logo"
+          onerror="this.onerror=null;this.src='https://placehold.co/150x40/38f8ac/111827?text=GlowForge'"
+        />
+      </a>
+
+      <!-- Hamburger Icon for Mobile -->
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+
+      <!-- Navigation Menu -->
+      <ul class="nav-menu">
+        <!-- HOME Dropdown -->
+        <li class="nav-item dropdown">
+          <a href="./index.html" class="nav-link"
+            >HOME <i class="fas fa-chevron-down dropdown-arrow"></i
+          ></a>
+          <ul class="dropdown-content">
+            <li><a href="./home2.html">HOME2</a></li>
+          </ul>
+        </li>
+
+        <!-- SERVICES Dropdown -->
+        <li class="nav-item dropdown">
+          <a href="./service.html" class="nav-link"
+            >WHAT WE DO <i class="fas fa-chevron-down dropdown-arrow"></i
+          ></a>
+          <ul class="dropdown-content">
+            <li><a href="./gen.html">Generics</a></li>
+            <li><a href="./api.html">APIs</a></li>
+            <li><a href="./med.html">Innovative Medicines</a></li>
+            <li><a href="./consumer.html">Consumer Health</a></li>
+          </ul>
+        </li>
+
+        <!-- ABOUT Dropdown -->
+        <li class="nav-item dropdown">
+          <a href="./about.html" class="nav-link"
+            >WHO WE ARE <i class="fas fa-chevron-down dropdown-arrow"></i
+          ></a>
+          <ul class="dropdown-content">
+            <li><a href="./about.html">About US</a></li>
+            <li><a href="./members.html">Members</a></li>
+            <li><a href="./faq.html">FAQs</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a href="./blog.html" class="nav-link">BLOG</a>
+        </li>
+        <li class="nav-item">
+          <a href="./dash.html" class="nav-link">DASHBOARD</a>
+        </li>
+        <li class="nav-item">
+          <a href="contact.html" class="nav-link">CONTACT</a>
+        </li>
+
+        <!-- Login Button -->
+        <li class="nav-item">
+          <a href="./login.html" class="login-button">
+            <span>LOG IN</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main class="container">
+      <!-- 1. Hero Section -->
+      <section class="hero-section">
+        <h1 class="main-heading">Generic Medicine Production</h1>
+        <p class="sub-heading">
+          Ensuring Global Access to Essential Medicines Through High-Purity,
+          Cost-Efficient Production.
+        </p>
+
+        <div class="glass-card" style="padding: 20px; text-align: center">
+          <img
+            src="./assets/gen1.webp"
+            alt="Placeholder image of a clean room facility"
+            style="width: 100%; border-radius: 10px; opacity: 0.8"
+          />
+        </div>
+      </section>
+
+      <!-- 2. Overview Section -->
+      <section class="overview-section">
+        <h2 class="section-title">The Stackly <span>Advantage</span></h2>
+        <div class="glass-card">
+          <p style="margin-bottom: 1rem">
+            Generic medicines are chemically identical to their branded
+            counterparts, offering the same therapeutic effect at a fraction of
+            the cost. At Stackly Pharma, our commitment goes beyond
+            bioequivalence—we guarantee **superior quality, affordability, and
+            safety** at every stage.
+          </p>
+          <p style="color: var(--muted)">
+            We leverage proprietary process optimization algorithms and
+            continuous manufacturing technology to minimize variance and
+            operational overhead, directly translating to accessible, reliable
+            medication for global markets.
+          </p>
+        </div>
+      </section>
+
+      <!-- 3. Manufacturing Process Section -->
+      <section class="process-section">
+        <h2 class="section-title">Our Rigorous <span>Process</span></h2>
+        <div class="process-grid">
+          <!-- Step 1: Research & Formulation -->
+          <div class="glass-card process-step">
+            <div class="step-icon">🔬</div>
+            <h3 class="process-title">Research & Formulation</h3>
+            <p class="process-description">
+              Developing high-stability, bioequivalent formulations using
+              advanced analytical chemistry and reverse engineering protocols.
+            </p>
+          </div>
+
+          <!-- Step 2: Raw Material Sourcing -->
+          <div class="glass-card process-step">
+            <div class="step-icon">📦</div>
+            <h3 class="process-title">Raw Material Sourcing</h3>
+            <p class="process-description">
+              Sourcing only high-purity APIs and excipients from audited,
+              certified suppliers to ensure product integrity from the start.
+            </p>
+          </div>
+
+          <!-- Step 3: GMP-Compliant Production -->
+          <div class="glass-card process-step">
+            <div class="step-icon">🏭</div>
+            <h3 class="process-title">GMP-Compliant Production</h3>
+            <p class="process-description">
+              Utilizing fully automated, closed-system continuous flow reactors
+              under strict current Good Manufacturing Practice (cGMP)
+              guidelines.
+            </p>
+          </div>
+
+          <!-- Step 4: Quality Testing -->
+          <div class="glass-card process-step">
+            <div class="step-icon">✅</div>
+            <h3 class="process-title">Quality Testing</h3>
+            <p class="process-description">
+              Multi-stage testing including dissolution, purity, and stability
+              checks, exceeding regulatory standards before batch release.
+            </p>
+          </div>
+
+          <!-- Step 5: Packaging & Distribution -->
+          <div class="glass-card process-step">
+            <div class="step-icon">🚚</div>
+            <h3 class="process-title">Packaging & Distribution</h3>
+            <p class="process-description">
+              Secure, temperature-controlled packaging and streamlined
+              distribution networks to maintain product efficacy to the final
+              mile.
+            </p>
+          </div>
+          <div class="glass-card process-step">
+            <div class="step-icon">💊</div>
+            <h3 class="process-title">Consumer Reach</h3>
+            <p class="process-description">
+              Developing high-stability, bioequivalent formulations using
+              advanced analytical chemistry and reverse engineering protocols.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. Quality & Compliance Section -->
+      <section class="quality-section">
+        <h2 class="section-title">Global <span>Compliance</span></h2>
+        <div class="quality-content">
+          <div class="glass-card">
+            <h3 style="color: var(--neon-green); margin-bottom: 1rem">
+              Certifications & Standards
+            </h3>
+            <ul class="certifications-list">
+              <li>Current Good Manufacturing Practice (cGMP)</li>
+              <li>World Health Organization GMP (WHO-GMP)</li>
+              <li>ISO 9001:2015 Quality Management System</li>
+              <li>FDA/EMA Bioequivalence Requirements</li>
+            </ul>
+          </div>
+          <div class="glass-card">
+            <h3 style="color: var(--neon-green); margin-bottom: 1rem">
+              Regulatory Safety Checks
+            </h3>
+            <p style="color: var(--muted)">
+              Our Quality Assurance protocols mandate quarterly internal audits
+              and continuous real-time monitoring of all production lines. We
+              employ **advanced spectroscopy** and chromatography to verify
+              every batch, ensuring it is 100% compliant with the reference
+              product and free from contaminants.
+            </p>
+            <p style="color: var(--muted); margin-top: 1rem">
+              Compliance isn't a goal, it's our operating baseline.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. Production Facility Section -->
+      <section class="facility-section">
+        <h2 class="section-title">Our <span>Facility</span></h2>
+        <div class="glass-card">
+          <p style="color: var(--muted); margin-bottom: 1.5rem">
+            Located in a dedicated science park, our manufacturing center
+            features **Industry 4.0 automation**, enabling unprecedented speed
+            and precision. We invest heavily in robotics and environmental
+            controls to maintain Class 1000 cleanroom conditions, essential for
+            sterile generic compounding.
+          </p>
+          <div class="facility-images">
+            <img src="./assets/gen2.webp" alt="Automated production line" />
+            <img src="./assets/gen3.webp" alt="Clean room interior" />
+            <img src="./assets/gen4.webp" alt="R&D laboratory station" />
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. Call-to-Action Section -->
+      <section class="cta-section">
+        <div class="cta-card glass-card">
+          <p class="cta-title">
+            Ready to launch your generic product with a trusted global partner?
+          </p>
+          <a href="./404.html" class="cta-button">Partner with Stackly</a>
+        </div>
+      </section>
+    </main>
+    <footer class="glass-footer">
+      <div class="footer-container">
+        <div class="footer-section logo-section">
+          <a href="./index.html" class="logo-link">
+            <img
+              src="./assets/logo.png"
+              alt="STACKLY Logo"
+              class="footer-logo"
+              onerror="this.onerror=null;this.src='https://placehold.co/180x45/38f8ac/111827?text=GlowForge+Logo'"
+            />
+          </a>
+          <p class="copyright">&copy; 2025 GlowForge. All rights reserved.</p>
+        </div>
+
+        <div class="footer-section quick-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="./index.html">HOME</a></li>
+            <li><a href="./blog.html">BLOG</a></li>
+            <li><a href="./contact.html">CONTACT</a></li>
+            <li><a href="./about.html">WHO WE ARE</a></li>
+            <li><a href="./service.html">WHAT WE DO</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section company-info">
+          <h3>Contact</h3>
+          <p>
+            <i class="fas fa-map-marker-alt"></i> 111 Neon Drive, New York, NY
+          </p>
+          <p><i class="fas fa-phone"></i> +1 (212) 555-GLOW</p>
+          <p><i class="fas fa-envelope"></i> support@glowforge.com</p>
+          <p><i class="fas fa-clock"></i> Mon - Fri: 9am - 5pm EST</p>
+        </div>
+
+        <div class="footer-section follow-newsletter">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="./404.html" aria-label="LinkedIn"
+              ><i class="fab fa-linkedin icon-glow"></i
+            ></a>
+            <a href="./404.html" aria-label="Twitter"
+              ><i class="fab fa-twitter icon-glow"></i
+            ></a>
+            <a href="./404.html" aria-label="Instagram"
+              ><i class="fab fa-instagram icon-glow"></i
+            ></a>
+            <a href="./404.html" aria-label="Discord"
+              ><i class="fab fa-discord icon-glow"></i
+            ></a>
+          </div>
+
+          <h3 class="newsletter-title">Stay Connected</h3>
+          <form
+            id="newsletter-form"
+            class="newsletter-form"
+            action="./404.html"
+          >
+            <input
+              type="email"
+              id="email-input"
+              placeholder="Your Email Address"
+              required
+            />
+            <button type="submit" id="newsletter-submit" class="neon-button">
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+    </footer>
+    <script src="./nav.js"></script>
+    <!-- <script src="./footer.js"></script> -->
+  </body>
+</html>

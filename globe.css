@@ -1,0 +1,1050 @@
+/* --- Global Styles & Color Palette --- */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap");
+
+:root {
+  --primary-color: #8a2be2; /* BlueViolet */
+  --secondary-color: #ff4500; /* OrangeRed */
+  --accent-color: #00ced1; /* DarkTurquoise */
+  --footer-bg: #1a1a2e; /* Deep Navy/Dark Purple */
+  --text-light: #f0f2f5;
+  --text-dark: #333;
+  --text-highlight: #ffc107; /* Amber for highlight */
+  --shadow-light: rgba(0, 0, 0, 0.15);
+  --shadow-dark: rgba(0, 0, 0, 0.4);
+  --transition-speed: 0.4s;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+  color: var(--text-dark);
+  background-color: var(--text-light);
+  overflow-x: hidden;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* --- Header / Navbar Styling --- */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: linear-gradient(
+    135deg,
+    #ff7e5f,
+    /* Coral / Orange */ #feb47b /* Peachy pink */
+  );
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05),
+    0 2px 4px -2px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  padding: 0 5%;
+  z-index: 1000;
+}
+
+/* Logo Container */
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  /* Optional: adjust spacing if you want text next to logo */
+  gap: 10px;
+  z-index: 1001; /* Keep above other elements */
+}
+
+/* Logo Image Wrapper */
+.logo-img {
+  width: 150px; /* Adjust as needed */
+  height: 80px; /* Maintain aspect ratio of your logo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Ensures logo image doesn’t overflow */
+  border-radius: 8px; /* Rounded corners for modern look */
+  /* Optional: fallback background */
+}
+
+/* Logo Image Styling */
+.logo-img img {
+  width: 100%; /* Fill the container */
+  height: 100%; /* Keep container ratio */
+  object-fit: contain; /* Ensure logo fits nicely without stretching */
+  display: block;
+}
+
+/* --- Desktop Navigation (Desktop First) --- */
+.nav-links-desktop {
+  display: none; /* Hidden by default, shown on desktop */
+  margin-left: auto;
+}
+
+.nav-list-desktop {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-item-desktop {
+  position: relative;
+}
+
+.nav-link-desktop {
+  /* Default styling for all links */
+  padding: 10px 0;
+  font-weight: 600;
+  color: #4b5563;
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: block;
+}
+
+/* Specific styling for links that trigger a dropdown (with caret) */
+.nav-item-desktop[aria-haspopup="true"] > .nav-link-desktop {
+  display: flex; /* Use flex to align text and caret */
+  align-items: center;
+  gap: 5px; /* Space between text and arrow */
+}
+
+/* Add the down arrow icon using a pseudo-element */
+.nav-item-desktop[aria-haspopup="true"] > .nav-link-desktop::after {
+  content: "\25BE"; /* Small downward pointing triangle */
+  font-size: 0.8rem; /* Increased size */
+  line-height: 1;
+  color: #6b7280; /* Darker gray for better visibility */
+  transition: transform 0.3s ease, color 0.3s ease;
+  transform: translateY(1px); /* slight vertical adjustment */
+}
+
+/* Hover effects for all links */
+.nav-item-desktop:hover > .nav-link-desktop {
+  color: #3b82f6;
+  transform: translateY(-2px);
+}
+
+/* Rotate and color the arrow on hover */
+.nav-item-desktop:hover > .nav-link-desktop::after {
+  color: #3b82f6;
+  transform: translateY(1px) rotate(180deg); /* Rotate 180deg on hover */
+}
+
+/* Desktop Dropdown Styling */
+.dropdown-desktop {
+  position: absolute;
+  top: 100%; /* Position below the parent link */
+  left: 50%;
+  transform: translateX(-50%) translateY(10px); /* Initial slide down */
+  background: #ffffff;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -4px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  overflow: hidden;
+  min-width: 180px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.nav-item-desktop:hover > .dropdown-desktop {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0); /* Final slide up */
+}
+
+.dropdown-desktop a {
+  padding: 12px 20px;
+  display: block;
+  white-space: nowrap;
+  color: #4b5563;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.dropdown-desktop a:hover {
+  background: linear-gradient(
+    135deg,
+    #ff7e5f,
+    /* Coral / Orange */ #feb47b /* Peachy pink */
+  ); /* Light blue background on hover */
+  color: #3b82f6;
+}
+
+.dropdown-desktop .nav-item-desktop {
+  /* Remove margin/padding from inner list items */
+  margin: 0;
+  padding: 0;
+}
+
+/* --- Mobile Menu Icon / Hamburger --- */
+.menu-toggle {
+  display: none; /* Hidden on desktop */
+  width: 30px;
+  height: 30px;
+  position: relative;
+  margin-left: auto;
+  cursor: pointer;
+  z-index: 1010;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+/* Custom Hamburger Icon (Stylized Plus/Minus) */
+.menu-toggle-line {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background: #3b82f6;
+  border-radius: 2px;
+  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+}
+
+.menu-toggle-line:nth-child(1) {
+  top: 50%;
+  transform: translateY(-50%) rotate(0deg);
+}
+.menu-toggle-line:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%) rotate(90deg);
+}
+
+/* Icon Morph: X/Close state */
+.menu-toggle.open .menu-toggle-line:nth-child(1) {
+  transform: translateY(-50%) rotate(45deg);
+}
+.menu-toggle.open .menu-toggle-line:nth-child(2) {
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+/* --- Mobile Navigation (Slide-in Menu) --- */
+.nav-mobile {
+  position: fixed;
+  top: 0;
+  right: 0; /* Slide in from the right */
+  width: 70%;
+  max-width: 300px;
+  height: 100%;
+  background-color: #ffffff;
+  padding-top: 90px;
+  transform: translateX(100%); /* Start off-screen */
+  transition: transform 0.5s cubic-bezier(0.7, 0, 0.3, 1);
+  box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+}
+
+.nav-mobile.open {
+  transform: translateX(0); /* Slide into view */
+}
+
+.nav-list-mobile {
+  list-style: none;
+  padding: 0 20px;
+}
+
+.nav-item-mobile {
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.nav-link-mobile {
+  display: block;
+  padding: 15px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #4b5563;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.nav-link-mobile:hover {
+  color: #3b82f6;
+}
+
+.nav-link-mobile.dropdown-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* Simple arrow style for demonstration */
+.dropdown-arrow {
+  display: inline-block;
+  margin-left: 8px;
+  border: solid black;
+  border-width: 0 2px 2px 0;
+  padding: 4px;
+  transform: rotate(45deg);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.dropdown-toggle.active .dropdown-arrow {
+  transform: rotate(135deg);
+}
+
+/* Optional for smooth dropdown animation */
+.dropdown-mobile {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.dropdown-mobile.open {
+  max-height: 500px; /* adjust as needed */
+}
+/* Dropdown Arrow/Caret (Mobile) */
+
+.dropdown-toggle.active::after {
+  transform: rotate(90deg); /* Rotate to indicate open */
+}
+
+/* Mobile Dropdown (Accordion Effect) */
+.dropdown-mobile {
+  list-style: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out, padding 0.4s ease-out; /* Smooth accordion animation */
+  padding-left: 0;
+}
+
+.dropdown-mobile.open {
+  max-height: 200px; /* Adjust based on content (must be > required height) */
+  padding-bottom: 10px;
+}
+
+.dropdown-mobile a {
+  display: block;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #6b7280;
+  transition: color 0.3s ease;
+  border-radius: 4px;
+  margin-top: 5px;
+}
+.dropdown-mobile a:hover {
+  color: #3b82f6;
+  background-color: #f7f9fb;
+}
+
+/* Overlay for Mobile Menu */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 998;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease;
+}
+
+.overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* --- Media Queries (Mobile to Desktop Transition) --- */
+@media (max-width: 900px) {
+  .nav-links-desktop {
+    display: none;
+  }
+  .menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 901px) {
+  .nav-links-desktop {
+    display: block;
+  }
+  .menu-toggle {
+    display: none;
+  }
+  .nav-mobile {
+    display: none;
+  }
+}
+
+/* Example Page Content for scrolling */
+.content {
+  padding: 20px 5%;
+}
+.content h1 {
+  margin-bottom: 20px;
+  color: #1f2937;
+}
+.content p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #4b5563;
+}
+
+/* --- Utility & Animation Classes --- */
+.content-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.section-heading {
+  text-align: center;
+  font-size: 2.5em;
+  font-weight: 700;
+  color: var(--footer-bg);
+  margin-bottom: 40px;
+  text-shadow: 1px 1px 1px var(--shadow-light);
+}
+
+@keyframes slideUpFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section-animated,
+.card-animated,
+.logistics-animated {
+  opacity: 0;
+  animation: slideUpFadeIn 0.8s forwards;
+}
+
+/* Staggering Delays */
+.card-animated:nth-child(1),
+.logistics-animated:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.card-animated:nth-child(2),
+.logistics-animated:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.card-animated:nth-child(3),
+.logistics-animated:nth-child(3) {
+  animation-delay: 0.5s;
+}
+
+/* --- Hero Section --- */
+/* --- Hero Section --- */
+.global-hero {
+  background: linear-gradient(
+    135deg,
+    var(--primary-color) 0%,
+    var(--accent-color) 100%
+  );
+  /* FIX: Adjust top padding to 130px (80px header + 50px buffer) */
+  padding: 130px 20px 80px;
+  text-align: center;
+  color: var(--text-light);
+  box-shadow: 0 4px 20px var(--shadow-dark);
+}
+
+.hero-title {
+  font-size: 3.5em;
+  margin-bottom: 10px;
+  font-weight: 900;
+}
+
+.hero-subtitle {
+  font-size: 1.2em;
+  font-weight: 400;
+  color: var(--text-light);
+  opacity: 0.9;
+}
+
+/* --- 1. Global Presence Overview Section --- */
+.overview-section {
+  background-color: #fff;
+}
+
+.overview-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.overview-text {
+  flex: 1;
+}
+
+.overview-text p {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.overview-image-container {
+  flex: 1;
+  max-width: 50%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px var(--shadow-light);
+}
+
+.overview-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.6s ease-out;
+}
+
+/* Image Hover Zoom */
+.overview-image-container:hover .overview-image {
+  transform: scale(1.05);
+}
+
+.primary-cta-button {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: var(--secondary-color);
+  color: var(--text-light);
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 50px;
+  transition: all var(--transition-speed) ease;
+}
+
+.primary-cta-button:hover {
+  background-color: var(--primary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 69, 0, 0.5);
+}
+
+/* --- 2. Manufacturing Capabilities Section (Vertical Cards) --- */
+.capabilities-section {
+  background-color: var(--text-light);
+  border-top: 3px solid var(--primary-color);
+}
+
+.capabilities-list {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.capability-card {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px var(--shadow-light);
+  transition: all 0.4s ease;
+  border-left: 8px solid var(--accent-color);
+}
+
+/* Card Hover Animation */
+.capability-card:hover {
+  transform: translateX(10px);
+  box-shadow: 0 10px 30px rgba(138, 43, 226, 0.3);
+  border-left-color: var(--primary-color);
+}
+
+.card-icon-wrap {
+  min-width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em;
+  margin-right: 25px;
+  color: var(--text-light);
+  transition: transform 0.4s ease;
+}
+
+.capability-card:hover .card-icon-wrap {
+  transform: rotate(360deg) scale(1.1);
+}
+
+.icon-wrap-primary {
+  background-color: var(--primary-color);
+}
+.icon-wrap-accent {
+  background-color: var(--accent-color);
+}
+.icon-wrap-secondary {
+  background-color: var(--secondary-color);
+}
+
+.card-body {
+  flex-grow: 1;
+}
+
+.card-body h3 {
+  color: var(--footer-bg);
+  font-size: 1.4em;
+  margin-bottom: 5px;
+}
+
+.capability-image {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  border-radius: 6px;
+  margin-top: 15px;
+  display: block;
+  border: 2px solid var(--text-light);
+}
+
+/* --- 3. Global Logistics and Distribution Section --- */
+.logistics-section {
+  background-color: var(--footer-bg);
+  color: var(--text-light);
+  padding: 80px 20px;
+}
+
+.logistics-section .section-heading {
+  color: var(--text-highlight);
+  margin-bottom: 50px;
+}
+
+.logistics-list {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.logistics-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 25px;
+  background-color: #313155;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px var(--shadow-dark);
+  transition: all 0.4s ease;
+  border-left: 5px solid;
+}
+
+.logistics-item:hover {
+  transform: scale(1.01);
+  background-color: var(--footer-bg);
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.2);
+}
+
+.item-primary {
+  border-color: var(--primary-color);
+}
+.item-accent {
+  border-color: var(--accent-color);
+}
+.item-secondary {
+  border-color: var(--secondary-color);
+}
+
+.logistics-icon {
+  font-size: 2.5em;
+  min-width: 40px;
+  color: var(--accent-color);
+  transition: color 0.4s ease;
+}
+
+.logistics-item:hover .logistics-icon {
+  color: var(--text-highlight);
+}
+
+.logistics-title {
+  font-size: 1.4em;
+  font-weight: 600;
+  color: var(--text-light);
+  margin-bottom: 5px;
+}
+
+.logistics-item p {
+  color: var(--text-light);
+  opacity: 0.8;
+}
+/* --- Footer Structure and Colorful Background --- */
+.stackly-footer {
+  background: var(--footer-bg);
+  color: var(--text-light);
+  padding-top: 50px;
+  box-shadow: 0 -10px 30px var(--shadow-dark);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Gradient Wave Separator (Unique Design Element) */
+.footer-wave-separator {
+  position: absolute;
+  top: -50px;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: var(--footer-bg);
+  z-index: 10;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 50%);
+  background: linear-gradient(
+    to right,
+    var(--primary-color),
+    var(--accent-color)
+  );
+}
+
+.footer-content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px 40px;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 20;
+}
+
+.footer-section {
+  flex: 1 1 200px; /* Allow sections to grow but maintain minimum width */
+  margin: 20px 15px;
+}
+
+.footer-section h3 {
+  color: var(--text-highlight);
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  border-bottom: 2px solid var(--accent-color);
+  padding-bottom: 5px;
+  display: inline-block;
+}
+
+/* --- 1. Logo Section Animations --- */
+.logo-link {
+  display: inline-block;
+}
+
+.stackly-logo {
+  width: 150px;
+  height: auto;
+  transition: transform var(--transition-speed) ease-out,
+    filter var(--transition-speed) ease-out;
+}
+
+/* Animation: Scale + Glow on Hover */
+.logo-link:hover .stackly-logo {
+  transform: scale(1.1) rotate(-2deg);
+  filter: drop-shadow(0 0 10px var(--primary-color));
+}
+
+.tagline {
+  font-style: italic;
+  opacity: 0.8;
+  margin-top: 10px;
+}
+
+/* --- 2. Quick Links Animations --- */
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-link {
+  color: var(--text-light);
+  text-decoration: none;
+  padding: 5px 0;
+  margin-bottom: 5px;
+  position: relative;
+  overflow: hidden;
+  transition: color var(--transition-speed) ease;
+  font-weight: 600;
+}
+
+/* Animation: Gradient Slide on Hover */
+.nav-link::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -100%; /* Start off-screen */
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(
+    to right,
+    var(--secondary-color),
+    var(--text-highlight)
+  );
+  transition: transform var(--transition-speed) ease-out,
+    left var(--transition-speed) ease-out;
+}
+
+.nav-link:hover {
+  color: var(--accent-color);
+  letter-spacing: 0.5px;
+}
+
+.nav-link:hover::before {
+  left: 0;
+}
+
+/* --- 3. Company Address Animations --- */
+.contact-info p {
+  margin-bottom: 12px;
+}
+
+.contact-link {
+  color: var(--text-light);
+  text-decoration: none;
+  transition: color var(--transition-speed) ease;
+}
+
+.contact-link:hover {
+  color: var(--secondary-color);
+}
+
+.contact-item {
+  opacity: 0; /* Initial state for fade-in */
+  transform: translateY(10px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  /* This will be managed by JS for a staggered look, but keeping CSS as fallback/base */
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.contact-item i {
+  margin-right: 10px;
+  color: var(--accent-color);
+  transition: transform 0.2s ease, color var(--transition-speed) ease;
+}
+
+/* Animation: Icon Bounce/Rotate on Hover */
+.contact-item:hover i {
+  transform: rotate(5deg) scale(1.1);
+  color: var(--secondary-color);
+}
+
+/* --- 4. Social Media & Newsletter Animations --- */
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.social-icon {
+  font-size: 1.5em;
+  color: var(--text-light);
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Spring-like transition */
+}
+
+/* Animation: Icon Scale/Color Transition */
+.social-icon:hover {
+  transform: scale(1.2) rotate(360deg);
+  background-color: var(--primary-color);
+  box-shadow: 0 0 15px rgba(138, 43, 226, 0.8);
+  color: var(--text-highlight);
+}
+
+/* Newsletter Form */
+.newsletter-form {
+  margin-top: 15px;
+}
+
+.newsletter-form p {
+  margin-bottom: 10px;
+}
+
+#newsletter-form {
+  display: flex;
+  gap: 10px;
+}
+
+#email-input {
+  padding: 10px;
+  border: 2px solid var(--accent-color);
+  border-radius: 5px;
+  background-color: var(--footer-bg);
+  color: var(--text-light);
+  flex-grow: 1;
+  transition: box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+/* Animation: Input Focus Glow */
+#email-input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 15px rgba(138, 43, 226, 0.6);
+}
+
+#submit-btn {
+  padding: 10px 20px;
+  background-color: var(--secondary-color);
+  color: var(--text-light);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animation: Button Hover/Click */
+#submit-btn:hover {
+  background-color: var(--primary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 69, 0, 0.4);
+}
+
+#submit-btn:active {
+  transform: scale(0.98);
+}
+
+.hidden-message {
+  color: var(--accent-color);
+  margin-top: 10px;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.hidden-message.show {
+  opacity: 1;
+}
+
+/* --- Footer Bottom --- */
+.footer-bottom {
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.9em;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+  .footer-content-wrapper {
+    flex-direction: column;
+    padding-bottom: 20px;
+  }
+
+  .footer-section {
+    margin: 15px 0;
+    text-align: center;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+    padding-bottom: 20px;
+  }
+
+  .footer-section:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  /* Quick Links: Horizontal on mobile */
+  .footer-nav {
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    gap: 10px 20px;
+  }
+
+  .nav-link {
+    padding: 5px 10px;
+    margin: 0;
+  }
+
+  /* Contact Info: Centered */
+  .contact-info {
+    text-align: center;
+  }
+
+  /* Social Icons: Centered */
+  .social-icons {
+    justify-content: center;
+  }
+
+  /* Newsletter Form: Stacked */
+  #newsletter-form {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .footer-content-wrapper {
+    justify-content: space-around;
+  }
+  .footer-section {
+    flex: 1 1 40%;
+  }
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+  .global-hero {
+    padding: 100px 15px 30px;
+  }
+  .hero-title {
+    font-size: 2.5em;
+  }
+  .section-heading {
+    font-size: 2em;
+  }
+
+  /* Overview Section Stack */
+  .overview-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .overview-image-container {
+    max-width: 100%;
+  }
+  .overview-text {
+    text-align: center;
+  }
+
+  /* Capabilities Section Stack */
+  .capability-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .card-icon-wrap {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+  .capability-image {
+    max-width: 100%;
+  }
+
+  /* Logistics Section Adjustments */
+  .logistics-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .logistics-icon {
+    margin-bottom: 10px;
+  }
+
+  /* Disable hover animations on mobile */
+  .capability-card:hover {
+    transform: none;
+  }
+  .capability-card:hover .card-icon-wrap {
+    transform: none;
+  }
+  .logistics-item:hover {
+    transform: none;
+  }
+}

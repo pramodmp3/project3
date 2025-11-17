@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Careers at Stackly Manufacturing</title>
+    <link rel="stylesheet" href="./career.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <a href="./home2.html" class="logo-link">
+        <div class="logo-img"><img src="./files/logooo.webp" alt="" /></div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="nav-links-desktop" aria-label="Main Navigation Desktop">
+        <ul class="nav-list-desktop">
+          <li class="nav-item-desktop" aria-haspopup="true">
+            <a href="./home2.html" class="nav-link-desktop">HOME</a>
+            <ul class="dropdown-desktop">
+              <li><a href="./index.html">HOME1</a></li>
+            </ul>
+          </li>
+          <li class="nav-item-desktop">
+            <a href="./service.html" class="nav-link-desktop">OUR SERVICE</a>
+          </li>
+          <li class="nav-item-desktop">
+            <a href="./career.html" class="nav-link-desktop">CAREERS</a>
+          </li>
+          <li class="nav-item-desktop" aria-haspopup="true">
+            <a href="./about2.html" class="nav-link-desktop">ABOUT</a>
+            <ul class="dropdown-desktop">
+              <li><a href="./about2.html">About US</a></li>
+              <li><a href="./globe.html">Stackly @ Global</a></li>
+            </ul>
+          </li>
+          <li class="nav-item-desktop">
+            <a href="./blog2.html" class="nav-link-desktop">BLOG</a>
+          </li>
+          <li class="nav-item-desktop">
+            <a href="./contact2.html" class="nav-link-desktop">CONTACT</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button
+        class="menu-toggle"
+        aria-controls="mobile-menu"
+        aria-expanded="false"
+        aria-label="Toggle Navigation"
+      >
+        <span class="menu-toggle-line"></span>
+        <span class="menu-toggle-line"></span>
+      </button>
+    </header>
+
+    <!-- Mobile Slide-in Navigation -->
+    <nav id="mobile-menu" class="nav-mobile" aria-label="Mobile Navigation">
+      <ul class="nav-list-mobile">
+        <li class="nav-item-mobile">
+          <a
+            class="nav-link-mobile dropdown-toggle"
+            data-dropdown="home-dropdown"
+            role="button"
+            aria-expanded="false"
+            aria-controls="home-dropdown"
+            href="./home2.html"
+          >
+            HOME
+            <span class="dropdown-arrow"></span>
+          </a>
+          <ul id="home-dropdown" class="dropdown-mobile">
+            <li><a href="./index.html">HOME1</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item-mobile">
+          <a href="./service.html" class="nav-link-mobile">OUR SERVICE</a>
+        </li>
+
+        <li class="nav-item-mobile">
+          <a href="./career.html" class="nav-link-mobile">CAREERS</a>
+        </li>
+
+        <li class="nav-item-mobile">
+          <a
+            class="nav-link-mobile dropdown-toggle"
+            data-dropdown="about-dropdown"
+            role="button"
+            aria-expanded="false"
+            aria-controls="about-dropdown"
+            href="./about2.html"
+          >
+            ABOUT
+            <span class="dropdown-arrow"></span>
+          </a>
+          <ul id="about-dropdown" class="dropdown-mobile">
+            <li><a href="./about2.html">About US</a></li>
+            <li><a href="./globe.html">Stackly @ Global</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item-mobile">
+          <a href="./blog2.html" class="nav-link-mobile">BLOG</a>
+        </li>
+
+        <li class="nav-item-mobile">
+          <a href="./contact2.html" class="nav-link-mobile">CONTACT</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Overlay for closing the mobile menu -->
+    <div class="overlay"></div>
+    <header class="career-hero">
+      <h1 class="hero-title">Join the Stackly Team</h1>
+      <p class="hero-subtitle">
+        Innovate, manufacture, and grow with a global leader in pharmaceuticals.
+      </p>
+    </header>
+
+    <section class="culture-section">
+      <h2 class="section-heading">Our Vibrant Work Culture</h2>
+      <div class="culture-grid">
+        <div class="culture-card card-animated fade-in-delay-1">
+          <i class="fas fa-handshake icon-color-primary"></i>
+          <h3>Collaboration</h3>
+          <p>
+            We foster an environment where diverse expertise merges to drive
+            breakthrough manufacturing solutions.
+          </p>
+        </div>
+
+        <div class="culture-card card-animated fade-in-delay-2">
+          <i class="fas fa-seedling icon-color-accent"></i>
+          <h3>Innovation</h3>
+          <p>
+            From process optimization to formulation science, innovation is the
+            core of our daily operations.
+          </p>
+        </div>
+
+        <div class="culture-card card-animated fade-in-delay-3">
+          <i class="fas fa-bolt icon-color-secondary"></i>
+          <h3>Impact</h3>
+          <p>
+            Every role at Stackly directly contributes to delivering
+            life-changing medicines worldwide.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits-section">
+      <h2 class="section-heading">Invested in Your Success</h2>
+      <div class="benefits-list">
+        <div class="benefit-item">
+          <div class="icon-wrap icon-wrap-primary">
+            <i class="fas fa-laptop-house"></i>
+          </div>
+          <div>
+            <h3>Flexible Work Arrangements</h3>
+            <p>
+              Achieve work-life balance with hybrid and flexible scheduling
+              options.
+            </p>
+          </div>
+        </div>
+
+        <div class="benefit-item">
+          <div class="icon-wrap icon-wrap-accent">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <div>
+            <h3>Continuous Learning</h3>
+            <p>
+              Access to professional certifications, mentorship programs, and
+              ongoing technical training.
+            </p>
+          </div>
+        </div>
+
+        <div class="benefit-item">
+          <div class="icon-wrap icon-wrap-secondary">
+            <i class="fas fa-heartbeat"></i>
+          </div>
+          <div>
+            <h3>Comprehensive Wellness</h3>
+            <p>
+              Top-tier health insurance, mental health support, and wellness
+              stipends.
+            </p>
+          </div>
+        </div>
+
+        <div class="benefit-item">
+          <div class="icon-wrap icon-wrap-highlight">
+            <i class="fas fa-rocket"></i>
+          </div>
+          <div>
+            <h3>Performance Bonuses</h3>
+            <p>
+              Annual profit-sharing and competitive bonuses tied to individual
+              and company performance.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="positions-section">
+      <h2 class="section-heading">Current Open Positions</h2>
+
+      <div class="positions-list">
+        <article class="job-card job-card-animated">
+          <div class="job-details">
+            <h3 class="job-title">Senior GMP Compliance Manager</h3>
+            <p class="job-location">
+              <i class="fas fa-map-marker-alt"></i> Boston, MA, USA
+            </p>
+            <p class="job-description">
+              Lead all quality assurance and regulatory affairs to maintain
+              global GMP standards across the North American facilities.
+            </p>
+          </div>
+          <a href="./404.html" class="apply-button">Apply Now</a>
+        </article>
+
+        <article class="job-card job-card-animated">
+          <div class="job-details">
+            <h3 class="job-title">Process Development Scientist</h3>
+            <p class="job-location">
+              <i class="fas fa-map-marker-alt"></i> Berlin, Germany
+            </p>
+            <p class="job-description">
+              Focus on optimizing upstream and downstream processes for biologic
+              drug substance manufacturing.
+            </p>
+          </div>
+          <a href="./404.html" class="apply-button">Apply Now</a>
+        </article>
+
+        <article class="job-card job-card-animated">
+          <div class="job-details">
+            <h3 class="job-title">Supply Chain Logistics Analyst</h3>
+            <p class="job-location">
+              <i class="fas fa-map-marker-alt"></i> Singapore, Asia Pacific
+            </p>
+            <p class="job-description">
+              Manage and optimize the global cold chain logistics network for
+              sensitive pharmaceutical products.
+            </p>
+          </div>
+          <a href="./404.html" class="apply-button">Apply Now</a>
+        </article>
+
+        <article class="job-card job-card-animated">
+          <div class="job-details">
+            <h3 class="job-title">Automation & Robotics Engineer</h3>
+            <p class="job-location">
+              <i class="fas fa-map-marker-alt"></i> Hyderabad, India
+            </p>
+            <p class="job-description">
+              Design, program, and maintain automated systems used in high-speed
+              sterile filling lines.
+            </p>
+          </div>
+          <a href="./404.html" class="apply-button">Apply Now</a>
+        </article>
+      </div>
+    </section>
+    <footer class="stackly-footer">
+      <div class="footer-wave-separator"></div>
+
+      <div class="footer-content-wrapper">
+        <div class="footer-section logo-section">
+          <a href="./home2.html" class="logo-link">
+            <img
+              src="./files/logooo.webp"
+              alt="Stackly Company Logo"
+              class="stackly-logo"
+            />
+          </a>
+          <p class="tagline">Innovating Health, Manufacturing Excellence.</p>
+        </div>
+
+        <div class="footer-section quick-links-section">
+          <h3>Quick Links</h3>
+          <nav class="footer-nav">
+            <a href="./home2.html" class="nav-link">HOME</a>
+            <a href="./service.html" class="nav-link">SERVICES</a>
+            <a href="./about2.html" class="nav-link">ABOUT</a>
+            <a href="./blog2.html" class="nav-link">BLOG</a>
+            <a href="./contact2.html" class="nav-link">CONTACT</a>
+          </nav>
+        </div>
+
+        <div class="footer-section contact-section">
+          <h3>Contact Us</h3>
+          <div class="contact-info">
+            <p class="contact-item fade-in-item">
+              <i class="fas fa-map-marker-alt icon-animated"></i> 123 Pharma
+              Blvd, Suite 400, ChemCity, TX 78701
+            </p>
+            <p class="contact-item fade-in-item">
+              <i class="fas fa-phone icon-animated"></i>
+              <a href="tel:+15551234567" class="contact-link"
+                >+1 (555) 123-4567</a
+              >
+            </p>
+            <p class="contact-item fade-in-item">
+              <i class="fas fa-envelope icon-animated"></i>
+              <a href="mailto:info@stackly.com" class="contact-link"
+                >info@stackly.com</a
+              >
+            </p>
+          </div>
+        </div>
+
+        <div class="footer-section social-newsletter-section">
+          <h3>Stay Connected</h3>
+
+          <div class="social-icons">
+            <a href="./404.html" class="social-icon" aria-label="Facebook"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="./404.html" class="social-icon" aria-label="Twitter"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a href="./404.html" class="social-icon" aria-label="LinkedIn"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <a href="./404.html" class="social-icon" aria-label="Instagram"
+              ><i class="fab fa-discord"></i
+            ></a>
+          </div>
+
+          <div class="newsletter-form">
+            <p>Subscribe to our newsletter for updates:</p>
+            <form id="newsletter-form" action="./404.html">
+              <input
+                type="email"
+                id="email-input"
+                placeholder="Enter your email"
+                required
+                aria-label="Email for newsletter"
+              />
+              <button type="submit" id="submit-btn">Subscribe</button>
+            </form>
+            <p id="form-message" class="hidden-message">
+              Thank you for subscribing!
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 Stackly Manufacturing. All Rights Reserved.</p>
+      </div>
+    </footer>
+    <script src="./nav.js"></script>
+  </body>
+</html>

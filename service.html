@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stackly: Pharmaceutical Manufacturing Services</title>
+    <link rel="stylesheet" href="service.css" />
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <a href="./home2.html" class="logo-link">
+        <div class="logo-img"><img src="./files/logooo.webp" alt="" /></div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="nav-links-desktop" aria-label="Main Navigation Desktop">
+        <ul class="nav-list-desktop">
+          <li class="nav-item-desktop" aria-haspopup="true">
+            <a href="./home2.html" class="nav-link-desktop">HOME</a>
+            <ul class="dropdown-desktop">
+              <li><a href="./index.html">HOME1</a></li>
+            </ul>
+          </li>
+          <li class="nav-item-desktop">
+            <a href="./service.html" class="nav-link-desktop">OUR SERVICE</a>
+          </li>
+          <li class="nav-item-desktop">
+            <a href="./career.html" class="nav-link-desktop">CAREERS</a>
+          </li>
+          <li class="nav-item-desktop" aria-haspopup="true">
+            <a href="./about2.html" class="nav-link-desktop">ABOUT</a>
+            <ul class="dropdown-desktop">
+              <li><a href="./about2.html">About US</a></li>
+              <li><a href="./globe.html">Stackly @ Global</a></li>
+            </ul>
+          </li>
+          <li class="nav-item-desktop">
+            <a href="./blog2.html" class="nav-link-desktop">BLOG</a>
+          </li>
+          <li class="nav-item-desktop">
+            <a href="./contact2.html" class="nav-link-desktop">CONTACT</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button
+        class="menu-toggle"
+        aria-controls="mobile-menu"
+        aria-expanded="false"
+        aria-label="Toggle Navigation"
+      >
+        <span class="menu-toggle-line"></span>
+        <span class="menu-toggle-line"></span>
+      </button>
+    </header>
+
+    <!-- Mobile Slide-in Navigation -->
+    <nav id="mobile-menu" class="nav-mobile" aria-label="Mobile Navigation">
+      <ul class="nav-list-mobile">
+        <li class="nav-item-mobile">
+          <a
+            class="nav-link-mobile dropdown-toggle"
+            data-dropdown="home-dropdown"
+            role="button"
+            aria-expanded="false"
+            aria-controls="home-dropdown"
+            href="./home2.html"
+          >
+            HOME
+            <span class="dropdown-arrow"></span>
+          </a>
+          <ul id="home-dropdown" class="dropdown-mobile">
+            <li><a href="./index.html">HOME1</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item-mobile">
+          <a href="./service.html" class="nav-link-mobile">OUR SERVICE</a>
+        </li>
+
+        <li class="nav-item-mobile">
+          <a href="./career.html" class="nav-link-mobile">CAREERS</a>
+        </li>
+
+        <li class="nav-item-mobile">
+          <a
+            class="nav-link-mobile dropdown-toggle"
+            data-dropdown="about-dropdown"
+            role="button"
+            aria-expanded="false"
+            aria-controls="about-dropdown"
+            href="./about2.html"
+          >
+            ABOUT
+            <span class="dropdown-arrow"></span>
+          </a>
+          <ul id="about-dropdown" class="dropdown-mobile">
+            <li><a href="./about2.html">About US</a></li>
+            <li><a href="./globe.html">Stackly @ Global</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item-mobile">
+          <a href="./blog2.html" class="nav-link-mobile">BLOG</a>
+        </li>
+
+        <li class="nav-item-mobile">
+          <a href="./contact2.html" class="nav-link-mobile">CONTACT</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Overlay for closing the mobile menu -->
+    <div class="overlay"></div>
+    <header class="service-hero">
+      <h1 class="hero-title">End-to-End Pharma Production</h1>
+      <p class="hero-subtitle">
+        From molecule to market, Stackly delivers uncompromising quality and
+        efficiency in every phase.
+      </p>
+    </header>
+
+    <!-- Services Overview Section -->
+    <section class="overview-section">
+      <h2 class="section-heading">Our Core Value Proposition</h2>
+      <div class="overview-content">
+        <p class="overview-text">
+          Stackly is a global leader specializing in **contract pharmaceutical
+          manufacturing** and development. We combine cutting-edge technology
+          with rigorous GMP compliance to ensure the highest quality standards.
+          Our expertise spans small molecule APIs to complex biologics,
+          providing a reliable partner for companies worldwide.
+        </p>
+        <div class="key-points-grid">
+          <div class="key-point point-animated">
+            <i class="fas fa-certificate icon-primary"></i>
+            <p>Global Regulatory Compliance</p>
+          </div>
+          <div class="key-point point-animated">
+            <i class="fas fa-cogs icon-accent"></i>
+            <p>Advanced Process Automation</p>
+          </div>
+          <div class="key-point point-animated">
+            <i class="fas fa-hand-holding-medical icon-secondary"></i>
+            <p>Reliable Supply Chain Security</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Outsourcing Services Section (Vertical Cards) -->
+    <section class="outsourcing-section">
+      <h2 class="section-heading">Integrated Outsourcing Solutions</h2>
+
+      <div class="outsourcing-cards-list">
+        <article class="service-card card-animated">
+          <div class="card-icon-wrap icon-wrap-primary">
+            <i class="fas fa-capsules"></i>
+          </div>
+          <div class="card-body">
+            <h3>Contract Drug Product Manufacturing</h3>
+            <p>
+              We handle all stages of formulation, fill/finish, and packaging
+              for oral solid dosage, liquid, and sterile injectable products.
+            </p>
+          </div>
+          <a href="./404.html" class="service-cta cta-primary">Learn More</a>
+        </article>
+
+        <article class="service-card card-animated">
+          <div class="card-icon-wrap icon-wrap-accent">
+            <i class="fas fa-vial"></i>
+          </div>
+          <div class="card-body">
+            <h3>API Synthesis and Development</h3>
+            <p>
+              Specializing in complex Active Pharmaceutical Ingredient (API)
+              synthesis, including highly potent compounds and custom
+              large-scale production.
+            </p>
+          </div>
+          <a href="./404.html" class="service-cta cta-accent">Learn More</a>
+        </article>
+
+        <article class="service-card card-animated">
+          <div class="card-icon-wrap icon-wrap-secondary">
+            <i class="fas fa-truck-loading"></i>
+          </div>
+          <div class="card-body">
+            <h3>Clinical Trial Material Supply (CTM)</h3>
+            <p>
+              Dedicated rapid scale-up and supply management for Phase I, II,
+              and III clinical trials under strict quality control.
+            </p>
+          </div>
+          <a href="./404.html" class="service-cta cta-secondary">Learn More</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- Service Details Section (Specific Features) -->
+    <section class="details-section">
+      <h2 class="section-heading">Specific Areas of Expertise</h2>
+
+      <div class="details-feature-grid">
+        <div class="detail-item item-animated">
+          <i class="fas fa-thermometer-half feature-icon"></i>
+          <h3 class="feature-title">Advanced Cold Chain Management</h3>
+          <p>
+            Ensuring the integrity of temperature-sensitive biologics and
+            vaccines through specialized logistics and monitoring.
+          </p>
+        </div>
+
+        <div class="detail-item item-animated">
+          <i class="fas fa-robot feature-icon"></i>
+          <h3 class="feature-title">Aseptic Robotics</h3>
+          <p>
+            Utilizing fully automated robotics in sterile environments to
+            minimize human intervention and contamination risks.
+          </p>
+        </div>
+
+        <div class="detail-item item-animated">
+          <i class="fas fa-project-diagram feature-icon"></i>
+          <h3 class="feature-title">Regulatory Submission Support</h3>
+          <p>
+            Providing end-to-end documentation and regulatory filings (NDA/BLA)
+            support for rapid market entry.
+          </p>
+        </div>
+      </div>
+    </section>
+    <footer class="stackly-footer">
+      <div class="footer-wave-separator"></div>
+
+      <div class="footer-content-wrapper">
+        <div class="footer-section logo-section">
+          <a href="./home2.html" class="logo-link">
+            <img
+              src="./files/logooo.webp"
+              alt="Stackly Company Logo"
+              class="stackly-logo"
+            />
+          </a>
+          <p class="tagline">Innovating Health, Manufacturing Excellence.</p>
+        </div>
+
+        <div class="footer-section quick-links-section">
+          <h3>Quick Links</h3>
+          <nav class="footer-nav">
+            <a href="./home2.html" class="nav-link">HOME</a>
+            <a href="./service.html" class="nav-link">SERVICES</a>
+            <a href="./about2.html" class="nav-link">ABOUT</a>
+            <a href="./blog2.html" class="nav-link">BLOG</a>
+            <a href="./contact2.html" class="nav-link">CONTACT</a>
+          </nav>
+        </div>
+
+        <div class="footer-section contact-section">
+          <h3>Contact Us</h3>
+          <div class="contact-info">
+            <p class="contact-item fade-in-item">
+              <i class="fas fa-map-marker-alt icon-animated"></i> 123 Pharma
+              Blvd, Suite 400, ChemCity, TX 78701
+            </p>
+            <p class="contact-item fade-in-item">
+              <i class="fas fa-phone icon-animated"></i>
+              <a href="tel:+15551234567" class="contact-link"
+                >+1 (555) 123-4567</a
+              >
+            </p>
+            <p class="contact-item fade-in-item">
+              <i class="fas fa-envelope icon-animated"></i>
+              <a href="mailto:info@stackly.com" class="contact-link"
+                >info@stackly.com</a
+              >
+            </p>
+          </div>
+        </div>
+
+        <div class="footer-section social-newsletter-section">
+          <h3>Stay Connected</h3>
+
+          <div class="social-icons">
+            <a href="./404.html" class="social-icon" aria-label="Facebook"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="./404.html" class="social-icon" aria-label="Twitter"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a href="./404.html" class="social-icon" aria-label="LinkedIn"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <a href="./404.html" class="social-icon" aria-label="Instagram"
+              ><i class="fab fa-discord"></i
+            ></a>
+          </div>
+
+          <div class="newsletter-form">
+            <p>Subscribe to our newsletter for updates:</p>
+            <form id="newsletter-form" action="./404.html">
+              <input
+                type="email"
+                id="email-input"
+                placeholder="Enter your email"
+                required
+                aria-label="Email for newsletter"
+              />
+              <button type="submit" id="submit-btn">Subscribe</button>
+            </form>
+            <p id="form-message" class="hidden-message">
+              Thank you for subscribing!
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 Stackly Manufacturing. All Rights Reserved.</p>
+      </div>
+    </footer>
+    <script src="./nav2.js"></script>
+  </body>
+</html>

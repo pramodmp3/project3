@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stackly Contact & Global Locations</title>
+    <link rel="stylesheet" href="contact2.css" />
+    <!-- Font Awesome for small icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <a href="./home2.html" class="logo-link">
+        <div class="logo-img"><img src="./files/logooo.webp" alt="" /></div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="nav-links-desktop" aria-label="Main Navigation Desktop">
+        <ul class="nav-list-desktop">
+          <li class="nav-item-desktop" aria-haspopup="true">
+            <a href="./home2.html" class="nav-link-desktop">HOME</a>
+            <ul class="dropdown-desktop">
+              <li><a href="./index.html">HOME1</a></li>
+            </ul>
+          </li>
+          <li class="nav-item-desktop">
+            <a href="./service.html" class="nav-link-desktop">OUR SERVICE</a>
+          </li>
+          <li class="nav-item-desktop">
+            <a href="./career.html" class="nav-link-desktop">CAREERS</a>
+          </li>
+          <li class="nav-item-desktop" aria-haspopup="true">
+            <a href="./about2.html" class="nav-link-desktop">ABOUT</a>
+            <ul class="dropdown-desktop">
+              <li><a href="./about2.html">About US</a></li>
+              <li><a href="./globe.html">Stackly @ Global</a></li>
+            </ul>
+          </li>
+          <li class="nav-item-desktop">
+            <a href="./blog2.html" class="nav-link-desktop">BLOG</a>
+          </li>
+          <li class="nav-item-desktop">
+            <a href="./contact2.html" class="nav-link-desktop">CONTACT</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button
+        class="menu-toggle"
+        aria-controls="mobile-menu"
+        aria-expanded="false"
+        aria-label="Toggle Navigation"
+      >
+        <span class="menu-toggle-line"></span>
+        <span class="menu-toggle-line"></span>
+      </button>
+    </header>
+
+    <!-- Mobile Slide-in Navigation -->
+    <nav id="mobile-menu" class="nav-mobile" aria-label="Mobile Navigation">
+      <ul class="nav-list-mobile">
+        <li class="nav-item-mobile">
+          <a
+            class="nav-link-mobile dropdown-toggle"
+            data-dropdown="home-dropdown"
+            role="button"
+            aria-expanded="false"
+            aria-controls="home-dropdown"
+            href="./home2.html"
+          >
+            HOME
+            <span class="dropdown-arrow"></span>
+          </a>
+          <ul id="home-dropdown" class="dropdown-mobile">
+            <li><a href="./index.html">HOME1</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item-mobile">
+          <a href="./service.html" class="nav-link-mobile">OUR SERVICE</a>
+        </li>
+
+        <li class="nav-item-mobile">
+          <a href="./career.html" class="nav-link-mobile">CAREERS</a>
+        </li>
+
+        <li class="nav-item-mobile">
+          <a
+            class="nav-link-mobile dropdown-toggle"
+            data-dropdown="about-dropdown"
+            role="button"
+            aria-expanded="false"
+            aria-controls="about-dropdown"
+            href="./about2.html"
+          >
+            ABOUT
+            <span class="dropdown-arrow"></span>
+          </a>
+          <ul id="about-dropdown" class="dropdown-mobile">
+            <li><a href="./about2.html">About US</a></li>
+            <li><a href="./globe.html">Stackly @ Global</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item-mobile">
+          <a href="./blog2.html" class="nav-link-mobile">BLOG</a>
+        </li>
+
+        <li class="nav-item-mobile">
+          <a href="./contact2.html" class="nav-link-mobile">CONTACT</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Overlay for closing the mobile menu -->
+    <div class="overlay"></div>
+    <header class="contact-header">
+      <h1>Connect with Stackly</h1>
+      <p>
+        We're ready to discuss your manufacturing needs and opportunities
+        worldwide.
+      </p>
+    </header>
+
+    <main class="contact-layout">
+      <!-- Left Side: Contact Form -->
+      <section class="contact-form-section">
+        <h2 class="section-title">Send Us a Message</h2>
+        <form action="./404.html" class="contact-form">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              placeholder="John Doe"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              placeholder="you@example.com"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input
+              type="text"
+              id="subject"
+              name="subject"
+              required
+              placeholder="Inquiry about GMP services"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              required
+              placeholder="How can Stackly assist you today?"
+            ></textarea>
+          </div>
+
+          <button type="submit" class="submit-button">Send Message</button>
+        </form>
+      </section>
+    </main>
+
+    <!-- Google Map Section (Full Width) -->
+    <section class="map-section">
+      <h2 class="section-title">Our Global Headquarters</h2>
+      <div class="map-embed">
+        <!-- Placeholder Map Embed -->
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.2882199890696!2d-73.98782358459424!3d40.74844057932858!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1638892780789!5m2!1sen!2sus"
+          width="100%"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+        ></iframe>
+      </div>
+    </section>
+
+    <!-- Global Location Cards Section -->
+    <section class="locations-section">
+      <h2 class="section-title">Global Manufacturing Hubs</h2>
+
+      <div class="location-cards-grid">
+        <div class="location-card" data-country="usa">
+          <i class="fas fa-industry card-icon"></i>
+          <h3>United States</h3>
+          <address>
+            123 Pharma Way, Building A<br />
+            Innovation City, CA 90010
+          </address>
+        </div>
+
+        <div class="location-card" data-country="germany">
+          <i class="fas fa-microscope card-icon"></i>
+          <h3>Germany</h3>
+          <address>
+            Industriestraße 42, 1. OG<br />
+            10115 Berlin, Deutschland
+          </address>
+        </div>
+
+        <div class="location-card" data-country="singapore">
+          <i class="fas fa-dna card-icon"></i>
+          <h3>Singapore</h3>
+          <address>
+            Biopolis Hub, Unit 08-01<br />
+            Singapore 138668
+          </address>
+        </div>
+
+        <div class="location-card" data-country="india">
+          <i class="fas fa-flask card-icon"></i>
+          <h3>India</h3>
+          <address>
+            Tech Park, Tower 3, Floor 5<br />
+            Bengaluru 560001, India
+          </address>
+        </div>
+      </div>
+    </section>
+    <footer class="stackly-footer">
+      <div class="footer-wave-separator"></div>
+
+      <div class="footer-content-wrapper">
+        <div class="footer-section logo-section">
+          <a href="./home2.html" class="logo-link">
+            <img
+              src="./files/logooo.webp"
+              alt="Stackly Company Logo"
+              class="stackly-logo"
+            />
+          </a>
+          <p class="tagline">Innovating Health, Manufacturing Excellence.</p>
+        </div>
+
+        <div class="footer-section quick-links-section">
+          <h3>Quick Links</h3>
+          <nav class="footer-nav">
+            <a href="./home2.html" class="nav-link">HOME</a>
+            <a href="./service.html" class="nav-link">SERVICES</a>
+            <a href="./about2.html" class="nav-link">ABOUT</a>
+            <a href="./blog2.html" class="nav-link">BLOG</a>
+            <a href="./contact2.html" class="nav-link">CONTACT</a>
+          </nav>
+        </div>
+
+        <div class="footer-section contact-section">
+          <h3>Contact Us</h3>
+          <div class="contact-info">
+            <p class="contact-item fade-in-item">
+              <i class="fas fa-map-marker-alt icon-animated"></i> 123 Pharma
+              Blvd, Suite 400, ChemCity, TX 78701
+            </p>
+            <p class="contact-item fade-in-item">
+              <i class="fas fa-phone icon-animated"></i>
+              <a href="tel:+15551234567" class="contact-link"
+                >+1 (555) 123-4567</a
+              >
+            </p>
+            <p class="contact-item fade-in-item">
+              <i class="fas fa-envelope icon-animated"></i>
+              <a href="mailto:info@stackly.com" class="contact-link"
+                >info@stackly.com</a
+              >
+            </p>
+          </div>
+        </div>
+
+        <div class="footer-section social-newsletter-section">
+          <h3>Stay Connected</h3>
+
+          <div class="social-icons">
+            <a href="./404.html" class="social-icon" aria-label="Facebook"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="./404.html" class="social-icon" aria-label="Twitter"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a href="./404.html" class="social-icon" aria-label="LinkedIn"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <a href="./404.html" class="social-icon" aria-label="Instagram"
+              ><i class="fab fa-discord"></i
+            ></a>
+          </div>
+
+          <div class="newsletter-form">
+            <p>Subscribe to our newsletter for updates:</p>
+            <form id="newsletter-form" action="./404.html">
+              <input
+                type="email"
+                id="email-input"
+                placeholder="Enter your email"
+                required
+                aria-label="Email for newsletter"
+              />
+              <button type="submit" id="submit-btn">Subscribe</button>
+            </form>
+            <p id="form-message" class="hidden-message">
+              Thank you for subscribing!
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 Stackly Manufacturing. All Rights Reserved.</p>
+      </div>
+    </footer>
+    <script src="./nav.js"></script>
+  </body>
+</html>

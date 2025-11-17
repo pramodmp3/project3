@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>STACKLY | Create Account</title>
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="signup.css" />
+  </head>
+
+  <body>
+    <div class="signup-container">
+      <!-- LEFT INFO SECTION -->
+      <div class="info-section">
+        <h1>Create Your STACKLY Account</h1>
+        <p>
+          Unlock powerful futuristic tools designed for collaboration,
+          automation, and efficiency.
+        </p>
+
+        <ul class="feature-list">
+          <li><i class="fas fa-user-shield"></i> Secure Identity Layer</li>
+          <li><i class="fas fa-cloud-upload-alt"></i> Encrypted Cloud Sync</li>
+          <li><i class="fas fa-bolt"></i> High-Speed Distributed Compute</li>
+          <li><i class="fas fa-chart-line"></i> Predictive AI Integration</li>
+        </ul>
+      </div>
+
+      <!-- RIGHT FORM SECTION -->
+      <div class="form-section">
+        <h2>Create Account</h2>
+
+        <p id="errorMessage" class="error-message"></p>
+
+        <form id="signupForm" autocomplete="off" action="./404.html">
+          <div class="input-group">
+            <input
+              type="text"
+              class="input-field"
+              id="fullname"
+              placeholder="Full Name"
+              required
+            />
+            <i class="fas fa-user input-icon"></i>
+          </div>
+
+          <div class="input-group">
+            <input
+              type="email"
+              class="input-field"
+              id="email"
+              placeholder="Email Address"
+              required
+            />
+            <i class="fas fa-envelope input-icon"></i>
+          </div>
+          <div class="input-group">
+            <input
+              type="number"
+              class="input-field"
+              id="email"
+              placeholder="Phone number"
+              required
+            />
+            <i class="fas fa-phone input-icon"></i>
+          </div>
+
+          <div class="input-group">
+            <input
+              type="password"
+              class="input-field"
+              id="password"
+              placeholder="Password"
+              required
+            />
+            <i class="fas fa-lock input-icon"></i>
+            <i
+              class="fa-regular fa-eye password-toggle"
+              id="togglePassword"
+            ></i>
+          </div>
+          <div class="input-group">
+            <input
+              type="password"
+              class="input-field"
+              id="password"
+              placeholder="Confirm Password"
+              required
+            />
+            <i class="fas fa-lock input-icon"></i>
+            <i
+              class="fa-regular fa-eye password-toggle"
+              id="togglePassword"
+            ></i>
+          </div>
+
+          <button class="signup-button" type="submit">
+            <span>Create Account</span>
+          </button>
+        </form>
+
+        <p class="login-text">
+          Already have an account? <a href="./login.html">Log In</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- JS -->
+    <script src="script.js"></script>
+  </body>
+</html>
